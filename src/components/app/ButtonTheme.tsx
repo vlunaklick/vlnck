@@ -5,10 +5,10 @@ import { useThemes } from '../../hooks/useThemes'
 
 const ButtonTheme = () => {
   const { theme, toggleTheme } = useThemes()
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState('none')
 
   useEffect(() => {
-    setIsDark(theme === 'dark')
+    setIsDark(theme === 'dark' ? 'dark' : 'light')
   }, [theme])
 
   return (
@@ -22,7 +22,7 @@ const ButtonTheme = () => {
         className={
           'absolute transition-transform duration-300' +
           ' ' +
-          (!isDark ? 'translate-y-0' : '-translate-y-6')
+          (isDark === 'dark' ? 'translate-y-0' : '-translate-y-6')
         }
       >
         <BsMoon />
@@ -31,7 +31,7 @@ const ButtonTheme = () => {
         className={
           'absolute transition-transform duration-300 ' +
           ' ' +
-          (isDark ? 'translate-y-0' : 'translate-y-6')
+          (isDark === 'light' ? 'translate-y-0' : 'translate-y-6')
         }
       >
         <BsSun />
