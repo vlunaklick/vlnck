@@ -15,7 +15,7 @@ function Nav({}: Props) {
 
       <img src="/icon-me.png" alt="My emoji" className="rounded-full w-10" />
 
-      <a className="text-sm text-slate-400 text-center">Blog</a>
+      <a className="text-sm text-slate-500 text-center">Blog</a>
 
       <NavLinks href={"/works"} name={"Works"} asPath={asPath} />
     </nav>
