@@ -8,15 +8,15 @@ function Contact({}: Props) {
         <p className='font-medium'>Contact</p>
         <div className="flex gap-5 text-xs sm:text-sm">
             <p className="text-slate-600 dark:text-slate-400 min-w-[8ch]">LinkedIn</p>
-            <a className="text-slate-900 dark:text-slate-50 font-medium" href="https://www.linkedin.com/in/vlunaklick/" target="_blank" rel="noreferrer">Valentín Lunaklick</a>
+            <a className="text-slate-900 dark:text-slate-50 font-medium underline" href="https://www.linkedin.com/in/vlunaklick/" target="_blank" rel="noreferrer">Valentín Lunaklick</a>
         </div>
         <div className="flex gap-5 text-xs sm:text-sm">
             <p className="text-slate-600 dark:text-slate-400 min-w-[8ch]">Github</p>
-            <a className="text-slate-900 dark:text-slate-50 font-medium" href="https://github.com/vlunaklick" target="_blank" rel="noreferrer">vlunaklick</a>
+            <a className="text-slate-900 dark:text-slate-50 font-medium underline" href="https://github.com/vlunaklick" target="_blank" rel="noreferrer">vlunaklick</a>
         </div>
         <div className="flex gap-5 text-xs sm:text-sm">
             <p className="text-slate-600 dark:text-slate-400 min-w-[8ch]">Resume</p>
-            <a className="text-slate-900 dark:text-slate-50 font-medium" href="valentin-lunaklick-resume.pdf" download="valentin-lunaklick-resume" target="_blank">Click to download</a>
+            <a className="text-slate-900 dark:text-slate-50 font-medium underline" href="valentin-lunaklick-resume.pdf" download="valentin-lunaklick-resume" target="_blank">Click to download</a>
         </div>
     </div>
   )
