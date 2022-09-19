@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import Link from "next/link";
+import NameFooter from "../components/NameFooter";
 
 import HomeInfo from "../components/HomeInfo";
 import Contact from "../components/Contact";
@@ -26,11 +26,7 @@ const Home: NextPage = () => {
           <HomeInfo />
           <Contact />
         </div>
-        <Link href="/">
-          <a className="text-slate-700 text-xs text-center mx-auto underline">
-            vlunaklick
-          </a>
-        </Link>
+        <NameFooter />
       </main>
     </div>
   );

@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
+import NameFooter from "../components/NameFooter";
 import Link from "next/link";
 
 const Custom404: NextPage = () => {
@@ -29,11 +30,7 @@ const Custom404: NextPage = () => {
             </Link>
           </div>
         </div>
-        <Link href="/">
-          <a className="text-slate-700 text-xs text-center mx-auto underline">
-            vlunaklick
-          </a>
-        </Link>
+        <NameFooter />
       </main>
     </div>
   );

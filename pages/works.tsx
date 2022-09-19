@@ -2,7 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import Link from "next/link";
+import NameFooter from "../components/NameFooter";
+
 import WorksSection from "../components/WorksSection";
 
 const Works: NextPage = () => {
@@ -23,11 +24,7 @@ const Works: NextPage = () => {
           <Header />
           <WorksSection />
         </div>
-        <Link href="/">
-          <a className="text-slate-700 text-xs text-center mx-auto underline">
-            vlunaklick
-          </a>
-        </Link>
+        <NameFooter />
       </main>
     </div>
   );
