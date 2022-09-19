@@ -18,15 +18,15 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="#000000" />
       </Head>
 
-      <main className="max-w-[640px] mx-auto w-full p-5 flex flex-col justify-between min-h-screen">
-        <div className="gap-8 flex flex-col">
+      <main className="w-[350px] sm:w-[640px] mx-auto p-5 flex flex-col justify-between min-h-screen gap-7">
+        <div className="gap-7 flex flex-col">
           <Nav />
           <Header />
           <Home_Info />
           <Contact />
         </div>
         <Link href="/">
-          <a className="text-slate-700 text-xs sm:text-sm text-center mx-auto">
+          <a className="text-slate-700 text-xs text-center mx-auto underline">
             vlunaklick
           </a>
         </Link>

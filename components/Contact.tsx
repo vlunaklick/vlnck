@@ -5,7 +5,7 @@ type Props = {}
 function Contact({}: Props) {
   return (
     <div className='px-4 flex flex-col gap-3'>
-        <h4 className='font-bold text-sm sm:text-base'>Contact</h4>
+        <p className='font-medium'>Contact</p>
         <div className="flex gap-5 text-xs sm:text-sm">
             <p className="text-slate-600 dark:text-slate-400 min-w-[8ch]">LinkedIn</p>
             <a className="text-slate-900 dark:text-slate-50 font-medium" href="https://www.linkedin.com/in/vlunaklick/" target="_blank" rel="noreferrer">Valentín Lunaklick</a>
