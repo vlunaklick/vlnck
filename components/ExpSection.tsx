@@ -34,7 +34,7 @@ function ExpSection({}: Props) {
   });
 
   return (
-    <section className="flex flex-col gap-5">
+    <section className="flex flex-col gap-5 px-4">
       <div className="flex flex-col gap-4">
         <p className="font-medium">Experience</p>
         {experience}

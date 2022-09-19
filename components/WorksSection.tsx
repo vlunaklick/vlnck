@@ -20,7 +20,7 @@ function WorksSection({}: Props) {
   });
 
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-4 px-4">
       <p className="font-medium">Projects</p>
       {worksCard}
     </section>
