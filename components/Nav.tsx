@@ -14,7 +14,7 @@ function Nav({}: Props) {
 
       <a className="text-sm text-slate-400 text-center">Blog</a>
 
-      <NavLinks href={"/projects"} name={"Works"} />
+      <NavLinks href={"/works"} name={"Works"} />
     </nav>
   );
 }

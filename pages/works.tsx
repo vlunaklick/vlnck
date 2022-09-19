@@ -3,11 +3,9 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Link from "next/link";
+import WorksSection from "../components/WorksSection";
 
-import HomeInfo from "../components/HomeInfo";
-import Contact from "../components/Contact";
-
-const Home: NextPage = () => {
+const Works: NextPage = () => {
   return (
     <div className="dark:bg-[#080C24] w-full">
       <Head>
@@ -23,8 +21,7 @@ const Home: NextPage = () => {
         <div className="gap-7 flex flex-col">
           <Nav />
           <Header />
-          <HomeInfo />
-          <Contact />
+          <WorksSection />
         </div>
         <Link href="/">
           <a className="text-slate-700 text-xs text-center mx-auto underline">
@@ -36,4 +33,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Works;

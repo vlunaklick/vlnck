@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Link from "next/link";
+
 import ExpSection from "../components/ExpSection";
 
 const Exp: NextPage = () => {
