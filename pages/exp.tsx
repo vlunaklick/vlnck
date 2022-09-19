@@ -14,7 +14,6 @@ const Exp: NextPage = () => {
         <meta name="description" content="Valentin Lunaklick's portfolio" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/logo192.png" />
-        <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
       </Head>
 

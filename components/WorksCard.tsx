@@ -2,6 +2,7 @@ import React from "react";
 import WorkTags from "./WorksTag";
 import Link from "next/link";
 import { BsGithub, BsDisplay } from "react-icons/bs";
+import Image from "next/future/image";
 
 type Props = {
   title: string;
