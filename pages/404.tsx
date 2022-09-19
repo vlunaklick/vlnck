@@ -21,7 +21,7 @@ const Custom404: NextPage = () => {
           <Nav />
           <Header />
           <div className="mx-auto text-center font-bold">
-            <p className="text-4xl">Page not found</p>
+            <p className="text-2xl">Page not found</p>
             <Link href="/">
               <a className="text-slate-400 text-sm text-center mx-auto underline">
                 Home
