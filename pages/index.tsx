@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Contact from "../components/Contact";
 import Header from "../components/Header";
-import Home_Info from "../components/Home_Info";
+import HomeInfo from "../components/HomeInfo";
 import Nav from "../components/Nav";
 import Link from "next/link";
 
@@ -18,11 +18,11 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="#000000" />
       </Head>
 
-      <main className="w-[350px] sm:w-[640px] mx-auto p-5 flex flex-col justify-between min-h-screen gap-7">
+      <main className="w-[350px] sm:w-[640px] mx-auto p-0 py-5 sm:p-5 flex flex-col justify-between min-h-screen gap-7">
         <div className="gap-7 flex flex-col">
           <Nav />
           <Header />
-          <Home_Info />
+          <HomeInfo />
           <Contact />
         </div>
         <Link href="/">
