@@ -5,7 +5,7 @@ import NavLinks from "./NavLinks";
 type Props = {};
 
 function Nav({}: Props) {
-  const {asPath} = useRouter()
+  const { asPath } = useRouter();
 
   return (
     <nav className="flex justify-around items-center">
@@ -15,7 +15,7 @@ function Nav({}: Props) {
 
       <img src="/icon-me.png" alt="My emoji" className="rounded-full w-10" />
 
-      <a className="text-sm text-slate-500 text-center">Blog</a>
+      <NavLinks href={"/blog"} name={"Blog"} asPath={asPath} />
 
       <NavLinks href={"/works"} name={"Works"} asPath={asPath} />
     </nav>

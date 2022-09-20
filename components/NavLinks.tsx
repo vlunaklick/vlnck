@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { NextRouter } from "next/router";
 
 type Props = {
   name: string;
