@@ -1,11 +1,12 @@
 import React from "react";
+import { COLORS_TEXT } from "../../utils/colors";
 
 type Props = {
   blocks: any;
 };
 
 function List({ blocks }: Props) {
-  function parseAnnotations(text: any) {
+  function parseAnnotations(text: any, key: string) {
     if (!text) return;
 
     let content = text.plain_text;
@@ -13,17 +14,20 @@ function List({ blocks }: Props) {
     const { bold, italic, color } = annotations;
 
     if (italic) {
-      content = <i>{content}</i>;
+      content = <i key={key}>{content}</i>;
     }
 
     if (bold) {
-      content = <strong>{content}</strong>;
+      content = <strong key={key}>{content}</strong>;
     }
 
     if (color) {
-      content = <li className={`text-${color}-500`}>{content}</li>;
+      type key = keyof typeof COLORS_TEXT;
+      const colorKey = color as key;
+      const bg = COLORS_TEXT[colorKey];
+      content = <li key={key} className={bg}>{content}</li>;
     } else {
-      content = <li>{content}</li>;
+      content = <li key={key}>{content}</li>;
     }
 
     return content;
@@ -31,7 +35,8 @@ function List({ blocks }: Props) {
   return (
     <>
       {blocks.map((text: any) => {
-        return parseAnnotations(text);
+        const key = Math.random().toString(36).substring(7);
+        return parseAnnotations(text, key);
       })}
     </>
   );

@@ -1,12 +1,13 @@
 import Link from "next/link";
 import React from "react";
+import { COLORS_TEXT } from "../../utils/colors";
 
 type Props = {
   blocks: [any];
 };
 
 function Paragraph({ blocks }: Props) {
-  function parseAnnotations(text: any) {
+  function parseAnnotations(text: any, key: string) {
     if (!text) return;
 
     let content = text.plain_text;
@@ -14,25 +15,31 @@ function Paragraph({ blocks }: Props) {
     const { bold, italic, color, underline } = annotations;
 
     if (italic) {
-      content = <i>{content}</i>;
+      content = <i key={key}>{content}</i>;
     }
 
     if (bold) {
-      content = <strong>{content}</strong>;
+      content = <strong key={key}>{content}</strong>;
     }
 
     if (underline) {
-      content = <u>{content}</u>;
+      content = <u key={key}>{content}</u>;
     }
 
     if (color) {
-      content = <span className={`text-${color}-500`}>{content}</span>;
+      type key = keyof typeof COLORS_TEXT;
+      const colorKey = color as key;
+      const bg = COLORS_TEXT[colorKey];
+      content = <span key={key} className={bg}>{content}</span>;
     }
 
     if (text.href) {
+      type key = keyof typeof COLORS_TEXT;
+      const colorKey = color as key;
+      const bg = COLORS_TEXT[colorKey];
       content = (
-        <Link href={text.href}>
-          <a className={color == "default" ? "text-blue-500" : `text-${color}-500`}>
+        <Link key={key} href={text.href}>
+          <a className={color == "default" ? "text-blue-500" : bg}>
             {content}
           </a>
         </Link>
@@ -46,7 +53,8 @@ function Paragraph({ blocks }: Props) {
   return (
     <p className="text-slate-300 leading-loose text-xs">
       {blocks.map((text: any) => {
-        return parseAnnotations(text);
+        const key = Math.random().toString(36).substring(7);
+        return parseAnnotations(text, key);
       })}
     </p>
   );

@@ -16,8 +16,6 @@ function Block({ data }: Props) {
   const handleBlock = (blockData: any) => {
     const { type } = blockData;
 
-    console.log(blockData);
-
     const types: { [key: string]: any } = {
       paragraph: (paragraph: any) => <Paragraph blocks={paragraph.rich_text} />,
       code: (code: any) => (

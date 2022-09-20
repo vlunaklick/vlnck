@@ -15,7 +15,7 @@ function BlogArticle({ entry }: Props) {
   const month = date.toLocaleString("en-us", { month: "long" });
 
   const title = name.title[0].plain_text;
-  const desc = description.rich_text[0].plain_text;
+  const desc = description.rich_text[0]?.plain_text || "";
 
   return (
     <Link href={`/blog/${niceUrl.rich_text[0].plain_text}`}>
@@ -23,12 +23,12 @@ function BlogArticle({ entry }: Props) {
         <article className="w-full p-3 bg-slate-800 rounded flex flex-col gap-3 cursor-pointer">
           <div className="flex flex-col gap-1">
             <div className="flex gap-1 text-sm sm:text-md">
-              <h3 className="font-medium capitalize">{title}</h3>
-              <p className="capitalize text-slate-300">
+              <h3 className="font-medium first-letter:capitalize">{title}</h3>
+              <p className="first-letter:capitalize text-slate-300">
                 — {month} {year}
               </p>
             </div>
-            <p className="text-xs sm:text-sm text-slate-300 capitalize line-clamp-2">
+            <p className="text-xs leading-5 text-slate-300 first-letter:capitalize line-clamp-2">
               {desc}
             </p>
           </div>
