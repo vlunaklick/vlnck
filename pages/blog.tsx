@@ -14,7 +14,7 @@ type Props = {
 
 const Blog: NextPage<Props> = ({ entries }) => {
   return (
-    <div className="dark:bg-[#080C24] w-full">
+    <div className="dark:bg-[#080C24] w-full transition-colors">
       <Head>
         <title>Valentín Lunaklick</title>
         <meta name="description" content="Valentin Lunaklick's portfolio" />

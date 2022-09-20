@@ -9,7 +9,7 @@ import Contact from "../components/HomePage/Contact";
 
 const Home: NextPage = () => {
   return (
-    <div className="dark:bg-[#080C24] bg-white w-full">
+    <div className="dark:bg-[#080C24] bg-white w-full transition-colors">
       <Head>
         <title>Valentín Lunaklick</title>
         <meta name="description" content="Valentin Lunaklick's portfolio" />
