@@ -6,6 +6,7 @@ import Paragraph from "./Paragraph";
 import ImageBlog from "./ImageBlog";
 import Code from "./Code";
 import List from "./List";
+import { KeyObjectType } from "crypto";
 
 type Props = {
   data: any;
@@ -17,7 +18,7 @@ function Block({ data }: Props) {
 
     console.log(blockData);
 
-    const types = {
+    const types: { [key: string]: any } = {
       paragraph: (paragraph: any) => <Paragraph blocks={paragraph.rich_text} />,
       code: (code: any) => (
         <Code language={code.language} blocks={code.rich_text} />
