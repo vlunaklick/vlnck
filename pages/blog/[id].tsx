@@ -60,10 +60,9 @@ export async function getServerSideProps({ params }: { params: any }) {
     },
   });
 
-
-  // @ts-ignore
   if (
     entries.results.length === 0 ||
+    // @ts-ignore
     entries.results[0].properties.visible.checkbox === false
   ) {
     return {
