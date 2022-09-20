@@ -20,15 +20,15 @@ function BlogArticle({ entry }: Props) {
   return (
     <Link href={`/blog/${niceUrl.rich_text[0].plain_text}`}>
       <a>
-        <article className="w-full p-3 bg-slate-800 rounded flex flex-col gap-3 cursor-pointer">
+        <article className="w-full p-3 bg-slate-100 dark:bg-slate-900 rounded flex flex-col gap-3 cursor-pointer">
           <div className="flex flex-col gap-1">
             <div className="flex gap-1 text-sm sm:text-md">
               <h3 className="font-medium first-letter:capitalize">{title}</h3>
-              <p className="first-letter:capitalize text-slate-300">
+              <p className="first-letter:capitalize text-slate-500 dark:text-slate-300">
                 — {month} {year}
               </p>
             </div>
-            <p className="text-xs leading-5 text-slate-300 first-letter:capitalize line-clamp-2">
+            <p className="text-xs leading-5 text-slate-600 dark:text-slate-300 first-letter:capitalize line-clamp-2">
               {desc}
             </p>
           </div>

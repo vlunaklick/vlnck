@@ -51,7 +51,7 @@ function Paragraph({ blocks }: Props) {
   }
 
   return (
-    <p className="text-slate-300 leading-loose text-xs">
+    <p className="dark:text-slate-300 text-slate-600 leading-loose text-xs">
       {blocks.map((text: any) => {
         const key = Math.random().toString(36).substring(7);
         return parseAnnotations(text, key);

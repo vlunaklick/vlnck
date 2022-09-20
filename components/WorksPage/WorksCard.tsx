@@ -19,7 +19,7 @@ function WorksCard({ title, description, tags, url, github, image }: Props) {
   });
 
   return (
-    <article className="bg-slate-800 sm:px-[11px] sm:py-[13px] rounded flex sm:flex-row flex-col p-4 gap-[14px] justify-center">
+    <article className="bg-slate-100 dark:bg-slate-900 sm:px-[11px] sm:py-[13px] rounded flex sm:flex-row flex-col p-4 gap-[14px] justify-center">
       <img
         src={image}
         alt={title}
@@ -28,7 +28,7 @@ function WorksCard({ title, description, tags, url, github, image }: Props) {
       <div className="flex flex-col justify-between gap-3 sm:gap-[13px]">
         <div className="flex flex-col gap-[2px] ">
           <div className="flex gap-2 items-center">
-            <p className="text-slate-100 text-sm font-bold">{title}</p>
+            <p className="text-slate-800 dark:text-slate-100 text-sm font-bold">{title}</p>
             <Link href={github} passHref>
               <a target="_blank">
                 <BsGithub className="h-5" />
@@ -40,7 +40,7 @@ function WorksCard({ title, description, tags, url, github, image }: Props) {
               </a>
             </Link>
           </div>
-          <p className="text-slate-400 text-xs leading-5 sm:leading-4">
+          <p className="text-slate-600 dark:text-slate-400 text-xs leading-5 sm:leading-4">
             {description}
           </p>
         </div>

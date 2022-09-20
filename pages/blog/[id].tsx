@@ -28,10 +28,10 @@ const Post: NextPage<Props> = ({ blocks }) => {
         <div className="gap-7 flex flex-col">
           <Nav />
           <Header />
-          <div>
+          <div className="flex flex-col px-4">
             <div className="flex flex-col gap-3">
               <Link href="/blog">
-                <a className="text-xs text-slate-300">← Back to blog</a>
+                <a className="text-xs text-slate-600 dark:text-slate-300">← Back to blog</a>
               </Link>
             </div>
             <div>
