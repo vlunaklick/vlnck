@@ -23,12 +23,12 @@ function BlogArticle({ entry }: Props) {
         <article className="w-full p-3 bg-slate-100 dark:bg-slate-900 rounded flex flex-col gap-3 cursor-pointer">
           <div className="flex flex-col gap-1">
             <div className="flex gap-1 text-sm sm:text-md">
-              <h3 className="font-medium first-letter:capitalize">{title}</h3>
-              <p className="first-letter:capitalize text-slate-500 dark:text-slate-300">
+              <h3 className="font-medium first-letter:capitalize text-xs sm:text-sm">{title}</h3>
+              <p className="first-letter:capitalize text-xs sm:text-sm text-slate-500 dark:text-slate-300">
                 — {month} {year}
               </p>
             </div>
-            <p className="text-xs leading-5 text-slate-600 dark:text-slate-300 first-letter:capitalize line-clamp-2">
+            <p className="text-[10px] text-xs leading-5 text-slate-600 dark:text-slate-300 first-letter:capitalize line-clamp-2">
               {desc}
             </p>
           </div>
