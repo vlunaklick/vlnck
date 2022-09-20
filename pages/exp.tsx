@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
-import Nav from "../components/Nav";
+import Nav from "../components/Navbar/Nav";
 import NameFooter from "../components/NameFooter";
 
-import ExpSection from "../components/ExpSection";
+import ExpSection from "../components/ExperiencePage/ExpSection";
 
 const Exp: NextPage = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import ExpArticle from "./ExpArticle";
-import { EXPERIENCE, EDUCATION } from "../utils/infoExp";
+import { EXPERIENCE, EDUCATION } from "../../utils/infoExp";
 
 type Props = {};
 

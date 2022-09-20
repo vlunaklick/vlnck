@@ -1,5 +1,5 @@
 import React from "react";
-import WorkTags from "./WorksTag";
+import Tag from "../Tag";
 import Link from "next/link";
 import { BsGithub, BsDisplay } from "react-icons/bs";
 import Image from "next/future/image";
@@ -15,7 +15,7 @@ type Props = {
 
 function WorksCard({ title, description, tags, url, github, image }: Props) {
   let tagsCards = tags.map((tag) => {
-    return <WorkTags key={title + tag} name={tag} />;
+    return <Tag key={title + tag} name={tag} />;
   });
 
   return (

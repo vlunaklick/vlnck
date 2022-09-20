@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Tag from "./BlogBlocks/Tag";
+import Tag from "../BlogBlocks/Tag";
 
 type Props = {
   entry: any;

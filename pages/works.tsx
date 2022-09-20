@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
-import Nav from "../components/Nav";
+import Nav from "../components/Navbar/Nav";
 import NameFooter from "../components/NameFooter";
 
-import WorksSection from "../components/WorksSection";
+import WorksSection from "../components/WorksPage/WorksSection";
 
 const Works: NextPage = () => {
   return (

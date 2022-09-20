@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
-import Nav from "../components/Nav";
+import Nav from "../components/Navbar/Nav";
 import NameFooter from "../components/NameFooter";
-import BlogSection from "../components/BlogSection";
+import BlogSection from "../components/BlogPage/BlogSection";
 import { Client } from "@notionhq/client";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });

@@ -1,15 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
-import Nav from "../components/Nav";
+import Nav from "../components/Navbar/Nav";
 import NameFooter from "../components/NameFooter";
 
-import HomeInfo from "../components/HomeInfo";
-import Contact from "../components/Contact";
+import HomeInfo from "../components/HomePage/HomeInfo";
+import Contact from "../components/HomePage/Contact";
 
 const Home: NextPage = () => {
   return (
-    <div className="dark:bg-[#080C24] w-full">
+    <div className="dark:bg-[#080C24] bg-white w-full">
       <Head>
         <title>Valentín Lunaklick</title>
         <meta name="description" content="Valentin Lunaklick's portfolio" />

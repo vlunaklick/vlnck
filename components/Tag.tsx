@@ -4,7 +4,7 @@ type Props = {
     name: string;
 }
 
-function WorksTag({name}: Props) {
+function Tag({name}: Props) {
   return (
     <span className='text-[8px] font-bold text-slate-800 bg-slate-300 py-0.5 px-3 rounded-full'>
         {name}
@@ -12,4 +12,4 @@ function WorksTag({name}: Props) {
   )
 }
 
-export default WorksTag
+export default Tag

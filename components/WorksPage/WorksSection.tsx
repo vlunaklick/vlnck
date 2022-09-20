@@ -1,5 +1,5 @@
 import React from "react";
-import { WORKS } from "../utils/infoWorks";
+import { WORKS } from "../../utils/infoWorks";
 import WorksCard from "./WorksCard";
 
 type Props = {};
