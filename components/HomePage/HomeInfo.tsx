@@ -4,7 +4,7 @@ type Props = {};
 
 function Home_Info({}: Props) {
   return (
-    <section className="px-4 flex flex-col gap-4 text-xs sm:text-sm leading-6">
+    <section className="px-4 flex flex-col gap-4 text-xs sm:text-sm leading-6 dark:text-slate-100 text-slate-800">
       <div className="flex flex-col">
         <p>Welcome to my portfolio! 👏</p>
         <p>
