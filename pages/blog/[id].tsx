@@ -49,7 +49,7 @@ const Post: NextPage<Props> = ({ blocks }) => {
 
 export default Post;
 
-export async function getServerSideProps({ params }) {
+export async function getServerSideProps({ params }: { params: any }) {
   const entries = await notion.databases.query({
     database_id: `${process.env.NOTION_DATABASE_ID}`,
     filter: {
@@ -60,6 +60,8 @@ export async function getServerSideProps({ params }) {
     },
   });
 
+
+  // @ts-ignore
   if (
     entries.results.length === 0 ||
     entries.results[0].properties.visible.checkbox === false
@@ -75,15 +77,6 @@ export async function getServerSideProps({ params }) {
 
   const mappedBlock = blocks.results.map((block) => {
     let filteredBlock = { ...block };
-    delete filteredBlock.object;
-    delete filteredBlock.id;
-    delete filteredBlock.parent;
-    delete filteredBlock.created_time;
-    delete filteredBlock.last_edited_time;
-    delete filteredBlock.created_by;
-    delete filteredBlock.last_edited_by;
-    delete filteredBlock.has_children;
-    delete filteredBlock.archived;
     return filteredBlock;
   });
 
