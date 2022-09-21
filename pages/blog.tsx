@@ -37,7 +37,7 @@ const Blog: NextPage<Props> = ({ entries }) => {
 
 export default Blog;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let { results } = await notion.databases.query({
     database_id: `${process.env.NOTION_DATABASE_ID}`,
   });

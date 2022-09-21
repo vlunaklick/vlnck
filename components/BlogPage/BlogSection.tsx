@@ -6,7 +6,6 @@ type Props = {
 };
 
 function BlogSection({ entries }: Props) {
-  console.log(entries)
   return (
     <div className="flex flex-col gap-3  px-4">
       <p className="font-medium">Blog</p>
