@@ -49,7 +49,7 @@ const Post: NextPage<Props> = ({ blocks }) => {
 
 export default Post;
 
-export async function getServerSideProps({ params }: { params: any }) {
+export async function getStaticProps({ params }: { params: any }) {
   const entries = await notion.databases.query({
     database_id: `${process.env.NOTION_DATABASE_ID}`,
     filter: {

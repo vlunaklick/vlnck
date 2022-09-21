@@ -37,18 +37,18 @@ const Blog: NextPage<Props> = ({ entries }) => {
 
 export default Blog;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let { results } = await notion.databases.query({
     database_id: `${process.env.NOTION_DATABASE_ID}`,
   });
 
-  const entries = results.filter(
-    (entry: any) => entry.properties.published?.checkbox
-  );
+  const entries = results.filter((entry: any) => {
+    return entry.properties.visible.checkbox === true;
+  });
 
   return {
     props: {
-      entries: entries ?? [],
+      entries,
     },
   };
 }
