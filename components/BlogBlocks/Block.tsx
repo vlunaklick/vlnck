@@ -6,7 +6,7 @@ import Paragraph from "./Paragraph";
 import ImageBlog from "./ImageBlog";
 import Code from "./Code";
 import List from "./List";
-import { KeyObjectType } from "crypto";
+import Quote from "./Quote";
 
 type Props = {
   data: any;
@@ -32,6 +32,9 @@ function Block({ data }: Props) {
           url={image.external?.url || image.file?.url}
           caption={image.caption[0].text.content || "Image"}
         />
+      ),
+      quote: (quote: any) => (
+        <Quote blocks={quote.rich_text} color={quote.color} />
       ),
     };
 

@@ -13,7 +13,7 @@ function Tag({ color, name }: Props) {
 
   return (
     <span
-      className={`text-[8px] font-bold ${bg} min-w-[10ch] text-center px-2 rounded-full`}
+      className={`text-[8px] font-bold ${bg} min-w-[10ch] text-center py-0.5 px-3 rounded-full capitalize max-w-[13ch]`}
     >
       {name}
     </span>

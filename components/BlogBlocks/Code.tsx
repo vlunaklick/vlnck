@@ -7,19 +7,36 @@ type Props = {
 };
 
 function Code({ language, blocks }: Props) {
-  function parseAnnotations(text: any) {
+  function parseContent(content: string, key: string) {
+    return (
+      <p
+        className="text-xs leading-6 text-slate-600 dark:text-slate-400"
+        key={key}
+      >
+        {content}
+      </p>
+    );
+  }
+
+  function parseAnnotations(text: any, key: string) {
     if (!text) return;
 
-    return text.plain_text;
+    let content = text.plain_text;
+    content = content.split("\n");
+    let contentArray = content.map((content: string) => {
+      const key2 = Math.random().toString(36).substring(7);
+      return parseContent(content, key2);
+    });
+
+    return contentArray;
   }
   return (
-    <div>
-      <div>
-        <Tag color="yellow" name={language} />
-      </div>
-      <code>
+    <div className="flex flex-col gap-1 mt-3 mb-1">
+      <Tag color="yellow" name={language} />
+      <code className="bg-slate-200 dark:bg-slate-800 rounded p-4 flex flex-col">
         {blocks.map((text: any) => {
-          return parseAnnotations(text);
+          const key = Math.random().toString(36).substring(7);
+          return parseAnnotations(text, key);
         })}
       </code>
     </div>

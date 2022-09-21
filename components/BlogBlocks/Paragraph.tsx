@@ -12,7 +12,7 @@ function Paragraph({ blocks }: Props) {
 
     let content = text.plain_text;
     const { annotations } = text;
-    const { bold, italic, color, underline } = annotations;
+    const { bold, italic, color, underline, strikethrough } = annotations;
 
     if (italic) {
       content = <i key={key}>{content}</i>;
@@ -24,6 +24,10 @@ function Paragraph({ blocks }: Props) {
 
     if (underline) {
       content = <u key={key}>{content}</u>;
+    }
+
+    if (strikethrough) {
+      content = <s key={key}>{content}</s>;
     }
 
     if (color) {
