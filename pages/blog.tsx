@@ -42,9 +42,13 @@ export async function getServerSideProps() {
     database_id: `${process.env.NOTION_DATABASE_ID}`,
   });
 
+  const entries = results.filter(
+    (entry: any) => entry.properties.published?.checkbox
+  );
+
   return {
     props: {
-      entries: results,
+      entries: entries ?? [],
     },
   };
 }
