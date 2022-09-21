@@ -2,30 +2,28 @@ import React from "react";
 
 type Props = {};
 
-function Home_Info({}: Props) {
+function HomeInfo({}: Props) {
   return (
-    <section className="px-4 flex flex-col gap-4 text-xs sm:text-sm leading-6 dark:text-slate-100 text-slate-800">
-      <div className="flex flex-col">
-        <p>Welcome to my portfolio! 👏</p>
-        <p>
-          I am Valentín, a Fullstack developer oriented in Frontend from Buenos
-          Aires, Argentina.
-        </p>
-      </div>
+    <section className="px-4 flex flex-col text-xs leading-6 dark:text-white text-black w-full prose dark:prose-invert max-w-none">
       <p>
+        Welcome to my portfolio! 👏
+        <br />I am Valentín, a Fullstack developer oriented in Frontend from
+        Buenos Aires, Argentina.
+      </p>
+      <p className="mt-0">
         My favorite tech stack is JavaScript, React/Next.js, Express with Prisma
         and PostgreSQL.
       </p>
-      <p>
+      <p className="mt-0">
         Currently, I am studying a “Bachelor in Information” Systems, at
         Universidad del Salvador, and working at CryptoMate, a Web3
         infrastructure service provider.
       </p>
-      <p>
+      <p className="mt-0">
         Moreover, in frontend I can use frameworks as styled-components and I
         can design with Figma and Photoshop.
       </p>
-      <p>
+      <p className="mt-0">
         In the backend side, I can also work in Java with SpringBoot, Golang and
         with MongoDB or Firebase.
       </p>
@@ -33,4 +31,4 @@ function Home_Info({}: Props) {
   );
 }
 
-export default Home_Info;
+export default HomeInfo;
