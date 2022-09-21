@@ -30,7 +30,7 @@ function Paragraph({ blocks }: Props) {
       content = <s key={key}>{content}</s>;
     }
 
-    if (color) {
+    if (color && color != "default") {
       type key = keyof typeof COLORS_TEXT;
       const colorKey = color as key;
       const bg = COLORS_TEXT[colorKey];

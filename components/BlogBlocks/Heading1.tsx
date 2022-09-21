@@ -21,7 +21,7 @@ function Heading1({ blocks }: Props) {
       content = <strong key={key}>{content}</strong>;
     }
 
-    if (color) {
+    if (color && color != "default") {
       type key = keyof typeof COLORS_TEXT;
       const colorKey = color as key;
       const bg = COLORS_TEXT[colorKey];
