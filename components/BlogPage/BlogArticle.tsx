@@ -8,7 +8,7 @@ type Props = {
 
 function BlogArticle({ entry }: Props) {
   const { properties } = entry;
-  const { description, name, tags, created, niceUrl } = properties;
+  const { description, name, tags, created, niceUrl, estimated } = properties;
 
   const date = new Date(created.created_time);
   const year = date.getFullYear();
@@ -20,15 +20,21 @@ function BlogArticle({ entry }: Props) {
   return (
     <Link href={`/blog/${niceUrl.rich_text[0].plain_text}`}>
       <a>
-        <article className="w-full p-3 bg-slate-100 dark:bg-slate-900 rounded flex flex-col gap-3 cursor-pointer">
+        <article className="w-full p-3 dark:bg-slate-800 bg-slate-100  rounded flex flex-col gap-3 cursor-pointer">
           <div className="flex flex-col gap-1">
-            <div className="flex gap-1 text-sm sm:text-md">
-              <h3 className="font-medium first-letter:capitalize text-xs sm:text-sm">{title}</h3>
-              <p className="first-letter:capitalize text-xs sm:text-sm text-slate-500 dark:text-slate-300">
-                — {month} {year}
+            <div className="flex gap-1 text-sm sm:text-md sm:flex-row flex-col">
+              <h3 className="font-semibold first-letter:capitalize text-xs sm:text-sm">
+                {title}
+              </h3>
+              <p className="hidden sm:block sm:text-sm text-gray-500 dark:text-gray-300">—</p>
+              <p className="first-letter:capitalize text-xs sm:text-sm text-gray-500 dark:text-gray-300">
+                {month} {year}
               </p>
             </div>
-            <p className="text-[10px] text-xs leading-5 text-slate-600 dark:text-slate-300 first-letter:capitalize line-clamp-2">
+            <p className="text-[9px] dark:text-gray-400 text-gray-500 ">
+              {estimated.rich_text[0].plain_text}
+            </p>
+            <p className="text-[10.5px] text-xs leading-5 text-gray-600 dark:text-gray-300 first-letter:capitalize line-clamp-2">
               {desc}
             </p>
           </div>

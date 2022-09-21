@@ -1,11 +1,10 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Header from "../../components/Header";
-import Nav from "../../components/Navbar/Nav";
-import NameFooter from "../../components/NameFooter";
+import DivLayout from "../../components/Layouts/DivLayout";
+import MainLayout from "../../components/Layouts/MainLayout";
 import { Client } from "@notionhq/client";
 import Block from "../../components/BlogBlocks/Block";
 import Link from "next/link";
+import NormalLayout from "../../components/Layouts/NormalLayout";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
@@ -15,23 +14,15 @@ type Props = {
 
 const Post: NextPage<Props> = ({ blocks }) => {
   return (
-    <div className="dark:bg-[#080C24] w-full transition-colors">
-      <Head>
-        <title>Valentín Lunaklick</title>
-        <meta name="description" content="Valentin Lunaklick's portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/logo192.png" />
-        <meta name="theme-color" content="#000000" />
-      </Head>
-
-      <main className="w-[350px] sm:w-[640px] mx-auto p-0 py-5 sm:p-5 flex flex-col justify-between min-h-screen gap-7">
-        <div className="gap-7 flex flex-col">
-          <Nav />
-          <Header />
+    <DivLayout>
+      <MainLayout>
+        <NormalLayout>
           <div className="flex flex-col px-4">
             <div className="flex flex-col gap-3">
               <Link href="/blog">
-                <a className="text-xs text-slate-600 dark:text-slate-300">← Back to blog</a>
+                <a className="text-xs text-slate-600 dark:text-slate-300">
+                  ← Back to blog
+                </a>
               </Link>
             </div>
             <div>
@@ -40,10 +31,9 @@ const Post: NextPage<Props> = ({ blocks }) => {
               })}
             </div>
           </div>
-        </div>
-        <NameFooter />
-      </main>
-    </div>
+        </NormalLayout>
+      </MainLayout>
+    </DivLayout>
   );
 };
 
