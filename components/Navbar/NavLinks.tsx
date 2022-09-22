@@ -11,16 +11,11 @@ function NavLinks({ name, href, asPath }: Props) {
   return (
     <Link href={href}>
       <a
-        className={`text-sm text-center capitalize text-gray-800 dark:text-slate-400 relative group`}
+        className={`text-sm text-center capitalize text-gray-800 dark:text-slate-400 border-transparent ${
+          asPath === href ? "border-current" : "hover:border-current transition-colors"
+        } border-b relative group`}
       >
         {name}
-        <span
-          className={`sm:absolute sm:-bottom-0.5 sm:left-0 sm:h-0.5  sm:bg-gray-500 dark:sm:bg-slate-700 ${
-            asPath === href
-              ? "w-full"
-              : "sm:transition-all sm:group-hover:w-full sm:w-0"
-          }`}
-        />
       </a>
     </Link>
   );

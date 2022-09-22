@@ -34,14 +34,14 @@ function ExpSection({}: Props) {
   });
 
   return (
-    <section className="flex flex-col gap-5 px-4">
+    <section className="flex flex-col gap-5 px-4 prose dark:prose-invert">
       <div className="flex flex-col gap-4">
-        <p className="font-semibold text-black dark:text-white">Experience</p>
+        <p className="font-semibold m-0 dark:text-white text-black">Experience</p>
         {experience}
       </div>
 
       <div className="flex flex-col gap-4">
-        <p className="font-semibold text-slate-800 dark:text-slate-100">Education</p>
+        <p className="font-semibold m-0 dark:text-white text-black">Education</p>
         {education}
       </div>
     </section>
