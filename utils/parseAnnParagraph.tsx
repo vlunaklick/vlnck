@@ -40,8 +40,15 @@ export function parseAnnParagraph(text: any, key: string) {
     const colorKey = color as key;
     const bg = COLORS_TEXT[colorKey];
     content = (
-      <Link key={key} href={text.href}>
-        <a className={color == "default" ? "text-blue-500" : bg}>{content}</a>
+      <Link key={key} href={text.href} passHref>
+        <a
+          {...(text.href.startsWith("mailto:")
+            ? { className: "" }
+            : { className: "", target: "_blank", rel: "noreferrer" })}
+          className={color == "default" ? "text-blue-500" : bg}
+        >
+          {content}
+        </a>
       </Link>
     );
     return content;
