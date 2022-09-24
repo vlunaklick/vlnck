@@ -11,8 +11,12 @@ function BlogArticle({ entry }: Props) {
   const { description, name, tags, created, niceUrl, estimated } = properties;
 
   const date = new Date(created.created_time);
-  const year = date.getFullYear();
-  const month = date.toLocaleString("en-us", { month: "long" });
+  const formatedDate = date.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
 
   const title = name.title[0].plain_text;
   const desc = description.rich_text[0]?.plain_text || "";
@@ -26,9 +30,11 @@ function BlogArticle({ entry }: Props) {
               <h3 className="font-semibold first-letter:capitalize text-xs sm:text-sm">
                 {title}
               </h3>
-              <p className="hidden sm:block sm:text-sm text-gray-500 dark:text-gray-300">—</p>
+              <p className="hidden sm:block sm:text-sm text-gray-500 dark:text-gray-300">
+                —
+              </p>
               <p className="first-letter:capitalize text-xs sm:text-sm text-gray-500 dark:text-gray-300">
-                {month} {year}
+                {formatedDate}
               </p>
             </div>
             <p className="text-[9px] dark:text-gray-400 text-gray-500 ">
