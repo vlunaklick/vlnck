@@ -8,7 +8,7 @@ export const COLORS_TEXT = {
   orange: "text-orange-500",
   gray: "text-gray-500",
   brown: "text-amber-500",
-  default: "dark:text-slate-300 text-slate-600",
+  default: "dark:text-white text-black",
 };
 
 export const COLORS_BG = {
@@ -33,5 +33,5 @@ export const BORDER_COLORS = {
   orange: "border-orange-300",
   gray: "border-gray-300",
   brown: "border-amber-300",
-  default: "dark:border-slate-800 border-slate-300",
+  default: "dark:border-slate-300 border-slate-800",
 };

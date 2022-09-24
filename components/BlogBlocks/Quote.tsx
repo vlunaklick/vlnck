@@ -14,7 +14,7 @@ function Quote({ blocks, color }: Props) {
 
   return (
     <p
-      className={`dark:text-slate-400 text-slate-600 leading-loose text-xs bg-slate-200 dark:bg-slate-800 rounded p-2 ${bg} border-l-2`}
+      className={`dark:text-slate-300 text-slate-600 leading-loose text-xs bg-slate-100 dark:bg-slate-800 rounded-r p-2 ${bg} border-l-2`}
     >
       {blocks.map((text: any) => {
         const key = Math.random().toString(36).substring(7);

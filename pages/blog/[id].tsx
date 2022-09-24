@@ -25,7 +25,7 @@ const Post: NextPage<Props> = ({ blocks }) => {
                 </a>
               </Link>
             </div>
-            <div>
+            <div className="prose dark:prose-invert text-black dark:text-white max-w-none">
               {blocks.map((block, key) => {
                 return <Block data={block} key={key} />;
               })}

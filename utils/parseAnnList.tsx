@@ -25,7 +25,7 @@ export function parseAnnList(text: any, key: string) {
       </li>
     );
   } else {
-    content = <li key={key}>{content}</li>;
+    content = <li className="leading-loose text-xs" key={key}>{content}</li>;
   }
 
   return content;
