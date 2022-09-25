@@ -10,9 +10,19 @@ const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
 type Props = {
   blocks: [any];
+  time: string;
+  title: string;
 };
 
-const Post: NextPage<Props> = ({ blocks }) => {
+const Post: NextPage<Props> = ({ blocks, time, title }) => {
+  // Make a date like : Friday 12 Jun, 2021
+  let date = new Date(time);
+  let day = date.toLocaleString("en-us", { weekday: "long" });
+  let month = date.toLocaleString("en-us", { month: "short" });
+  let year = date.toLocaleString("en-us", { year: "numeric" });
+  let dayNum = date.toLocaleString("en-us", { day: "numeric" });
+  let dateStr = `${day} ${dayNum} ${month}, ${year}`;
+
   return (
     <DivLayout>
       <MainLayout>
@@ -25,7 +35,10 @@ const Post: NextPage<Props> = ({ blocks }) => {
                 </a>
               </Link>
             </div>
+
             <div className="prose dark:prose-invert text-black dark:text-white max-w-none">
+              <p className="text-xl sm:text-3xl font-bold mb-2 mt-5">{title}</p>
+              <p className="text-xs mt-2 text-slate-400">{dateStr}</p>
               {blocks.map((block, key) => {
                 return <Block data={block} key={key} />;
               })}
@@ -72,6 +85,10 @@ export async function getServerSideProps({ params }: { params: any }) {
   return {
     props: {
       blocks: mappedBlock,
+      // @ts-ignore
+      time: entries.results[0].created_time,
+      // @ts-ignore
+      title: entries.results[0].properties.name.title[0].plain_text,
     },
   };
 }

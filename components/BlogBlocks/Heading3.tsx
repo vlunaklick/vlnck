@@ -7,7 +7,7 @@ type Props = {
 
 function Heading3({ blocks }: Props) {
   return (
-    <h3 className="text-base sm:text-xl mt-7 mb-4">
+    <h3 className="text-sm sm:text-base mt-7 mb-4">
       {blocks.map((text: any) => {
         const key = Math.random().toString(36).substring(7);
         return parseAnnHeading(text, key);

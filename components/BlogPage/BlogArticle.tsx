@@ -12,9 +12,8 @@ function BlogArticle({ entry }: Props) {
 
   const date = new Date(created.created_time);
   const formatedDate = date.toLocaleDateString("en-US", {
-    weekday: "long",
-    month: "short",
     day: "numeric",
+    month: "long",
     year: "numeric",
   });
 

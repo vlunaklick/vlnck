@@ -27,7 +27,7 @@ function WorksCard({ title, description, tags, url, github, image }: Props) {
       <div className="flex flex-col justify-between gap-3 sm:gap-[13px]">
         <div className="flex flex-col gap-[2px] ">
           <div className="flex gap-2 items-center">
-            <p className="text-gray-800 dark:text-gray-100 text-sm font-bold">{title}</p>
+            <p className="text-gray-800 dark:text-gray-100 text-sm font-semibold">{title}</p>
             <Link href={github} passHref>
               <a target="_blank">
                 <BsGithub className="h-5" />
