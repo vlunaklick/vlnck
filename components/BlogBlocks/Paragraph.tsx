@@ -7,7 +7,7 @@ type Props = {
 
 function Paragraph({ blocks }: Props) {
   return (
-    <p className="leading-loose text-xs">
+    <p className="leading-loose text-xs sm:text-[13px] break-words">
       {blocks.map((text: any) => {
         const key = Math.random().toString(36).substring(7);
         return parseAnnParagraph(text, key);
