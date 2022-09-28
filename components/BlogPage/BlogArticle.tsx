@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Tag from "../BlogBlocks/Tag";
+import { Entries } from "../../types/entries";
 
 type Props = {
-  entry: any;
+  entry: Entries;
 };
 
 function BlogArticle({ entry }: Props) {

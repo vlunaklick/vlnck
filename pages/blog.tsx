@@ -5,11 +5,12 @@ import NormalLayout from "../components/Layouts/NormalLayout";
 
 import BlogSection from "../components/BlogPage/BlogSection";
 import { Client } from "@notionhq/client";
+import { Entries } from "../types/entries";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
 type Props = {
-  entries: [any];
+  entries: [Entries];
 };
 
 const Blog: NextPage<Props> = ({ entries }) => {
