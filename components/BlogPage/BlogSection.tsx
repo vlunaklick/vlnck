@@ -8,8 +8,8 @@ type Props = {
 
 function BlogSection({ entries }: Props) {
   return (
-    <div className="flex flex-col gap-3  px-4">
-      <p className="font-medium">Blog</p>
+    <div className="flex flex-col sm:gap-7 px-4">
+      <p className="font-semibold">Blog</p>
       {entries.length === 0 && (
         <p className="dark:text-slate-400 text-slate-800 text-xs">
           There are no entries

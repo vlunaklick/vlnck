@@ -5,7 +5,7 @@ export const EXPERIENCE = [
 		title: 'Junior Fullstack Developer',
 		place: 'CryptoMate',
 		URL: 'https://cryptomate.me/',
-		text: 'I joined the team as a backend developer where I helped with the implementation of small features in APIs in Node.js and Golang. As time went on, I was assigned to develop APIs and services on my own in Java with Spring Boot. After a while, I got promoted to a Fullstack charge.',
+		text: 'I joined the team working with the implementation of features for APIs made with Node.js. As time went on, I was assigned to develop them and create services in Java with Spring Boot.',
 	},
 ]
 
