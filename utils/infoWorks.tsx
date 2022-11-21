@@ -9,17 +9,13 @@ export const WORKS = [
     code: "https://github.com/vlunaklick/live_in_chat",
   },
   {
-    title: "Shopping Cart",
+    title: "Frival E-Commerce",
     content:
-      "'Shopping cart' is an e-commerce. It was my first big project using React where I tried to implement react-router. Also, all the CSS was changed to styled-components to change the themes easier.",
-    src: "/project-shopping.png",
-    techs: [
-      "React",
-      "localStorage",
-      "styled-components",
-    ],
-    liveview: "https://vlunaklick.github.io/shopping_cart/",
-    code: "https://github.com/vlunaklick/shopping_cart",
+      "This is a clone of an e-commerce made with Next.js with the goal to improve my skills in Next.js and React and improve my UI/UX skills. I used the Next.js framework to make the project and I used the Context API to manage the state of the application.",
+    src: "/project-frival.png",
+    techs: ["Next.js", "React", "Context API", "Tailwind CSS"],
+    liveview: "https://frival-commerce.vercel.app/",
+    code: "https://github.com/vlunaklick/frival-commerce",
   },
   {
     title: "Emoji Catcher & Emoji Picker",
