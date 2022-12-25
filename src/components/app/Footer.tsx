@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const NameFooter = () => {
+const Footer = () => {
   return (
     <Link href="/">
       <a className="dark:text-slate-700 text-slate-400 text-xs text-center mx-auto underline">
@@ -10,4 +10,4 @@ const NameFooter = () => {
   )
 }
 
-export default NameFooter
+export default Footer

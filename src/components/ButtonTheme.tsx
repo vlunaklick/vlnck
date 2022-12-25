@@ -2,7 +2,7 @@ import { BsSun, BsMoon } from 'react-icons/bs'
 
 import { useThemes } from '../hooks/useThemes'
 
-const ThemeButton = () => {
+const ButtonTheme = () => {
   const { theme, toggleTheme } = useThemes()
 
   return (
@@ -19,4 +19,4 @@ const ThemeButton = () => {
   )
 }
 
-export default ThemeButton
+export default ButtonTheme

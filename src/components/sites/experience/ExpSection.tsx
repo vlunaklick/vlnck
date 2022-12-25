@@ -1,4 +1,4 @@
-import { EXPERIENCE, EDUCATION } from '../../../content/info/experience'
+import { EXPERIENCE, EDUCATION } from '../../../../content/info/experience'
 
 import ExpArticle from './ExpArticle'
 

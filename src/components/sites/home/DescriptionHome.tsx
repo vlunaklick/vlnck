@@ -1,4 +1,4 @@
-const HomeInfo = () => {
+const DescriptionHome = () => {
   return (
     <section className="px-4 flex flex-col text-xs sm:text-[13px] leading-6 dark:text-white text-black w-full prose dark:prose-invert max-w-none">
       <p>
@@ -27,4 +27,4 @@ const HomeInfo = () => {
   )
 }
 
-export default HomeInfo
+export default DescriptionHome

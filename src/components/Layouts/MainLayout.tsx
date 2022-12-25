@@ -1,7 +1,7 @@
-import Header from '../Header'
-import Nav from '../Navbar/Nav'
-import NameFooter from '../NameFooter'
-import ThemeButton from '../ThemeButton'
+import Header from '../app/Header'
+import Nav from '../app/Nav'
+import Footer from '../app/Footer'
+import ButtonTheme from '../ButtonTheme'
 import HeadLayout from './HeadLayout'
 
 interface Props {
@@ -15,10 +15,10 @@ const MainLayout = ({ children }: Props) => {
         <div className="gap-7 flex flex-col relative">
           <Nav />
           <Header />
-          <ThemeButton />
+          <ButtonTheme />
           {children}
         </div>
-        <NameFooter />
+        <Footer />
       </main>
     </HeadLayout>
   )

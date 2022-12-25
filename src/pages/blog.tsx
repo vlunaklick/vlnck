@@ -5,15 +5,18 @@ import fs from 'fs'
 import path from 'path'
 
 import Post from '../types/post'
+import { sortByDate } from '../utils/sortByDate'
 
-import MainLayout from '../components/Layouts/MainLayout'
-import CardBlog from '../components/Blog/CardBlog'
+import MainLayout from '../components/layouts/MainLayout'
+import CardBlog from '../components/sites/blog/CardBlog'
 
 interface Props {
   posts: Post[]
 }
 
 const Blog: NextPage<Props> = ({ posts }) => {
+  posts.sort((a, b) => sortByDate(a.frontmatter.date, b.frontmatter.date))
+
   return (
     <MainLayout>
       <div className="flex flex-col gap-4">

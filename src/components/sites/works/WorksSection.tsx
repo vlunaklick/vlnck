@@ -1,4 +1,4 @@
-import { WORKS } from '../../../content/info/works'
+import { WORKS } from '../../../../content/info/works'
 
 import WorksCard from './WorksCard'
 

@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 
-import MainLayout from '../components/Layouts/MainLayout'
-import HomeInfo from '../components/Home/HomeInfo'
-import Contact from '../components/Home/Contact'
+import MainLayout from '../components/layouts/MainLayout'
+import DescriptionHome from '../components/sites/home/DescriptionHome'
+import Contact from '../components/sites/home/Contact'
 
 const Home: NextPage = () => {
   return (
     <MainLayout>
-      <HomeInfo />
+      <DescriptionHome />
       <Contact />
     </MainLayout>
   )

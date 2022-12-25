@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import matter from 'gray-matter'
-import marked from 'marked'
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
 import fs from 'fs'
 import path from 'path'
 
-import MainLayout from '../../components/Layouts/MainLayout'
+import MainLayout from '../../components/layouts/MainLayout'
 import FrontMatter from '../../types/post'
 
 interface Props {
@@ -39,7 +39,7 @@ const Post = ({ frontmatter, slug, content }: Props) => {
             {frontmatter.title}
           </h1>
           <p className="text-xs mt-2 text-slate-400">{formatedDate}</p>
-          <p>{content}</p>
+          <ReactMarkdown>{content}</ReactMarkdown>
         </div>
       </div>
     </MainLayout>
