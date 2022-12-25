@@ -14,7 +14,7 @@ const Nav = () => {
 
       <Link href={'/'}>
         <img
-          src="/icon-me.png"
+          src={'/images' + '/icon-me.png'}
           alt="My emoji"
           className="rounded-full w-10 cursor-pointer"
         />

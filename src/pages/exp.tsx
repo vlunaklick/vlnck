@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
 import MainLayout from '../components/Layouts/MainLayout'
-import ExpSection from '../components/ExperiencePage/ExpSection'
+import ExpSection from '../components/Experience/ExpSection'
 
 const Exp: NextPage = () => {
   return (

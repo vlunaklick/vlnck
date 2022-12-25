@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
 import MainLayout from '../components/Layouts/MainLayout'
-import WorksSection from '../components/WorksPage/WorksSection'
+import WorksSection from '../components/Works/WorksSection'
 
 const Works: NextPage = () => {
   return (

@@ -25,7 +25,11 @@ const WorksCard = ({ title, description, tags, url, github, image }: Props) => {
         className="sm:max-h-36 rounded aspect-video cursor-pointer w-full sm:min-w-max"
         rel="noreferrer"
       >
-        <img src={image} alt={title} className="w-full h-full" />
+        <img
+          src={'/images/projects/' + image}
+          alt={title}
+          className="w-full h-full"
+        />
       </a>
       <div className="flex flex-col justify-between gap-3 sm:gap-[13px]">
         <div className="flex flex-col gap-[2px] ">
