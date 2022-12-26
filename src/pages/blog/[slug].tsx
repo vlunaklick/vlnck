@@ -1,8 +1,6 @@
 import Link from 'next/link'
-import matter from 'gray-matter'
 
-import fs from 'fs'
-import path from 'path'
+import { getFileWithMetadata, getFileBySlug } from '../../lib/mdReader'
 
 import MainLayout from '../../components/layouts/MainLayout'
 import FrontMatter from '../../types/post'
@@ -47,13 +45,7 @@ const Post = ({ frontmatter, content }: Props) => {
 export default Post
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('content/posts'))
-
-  const paths = files.map(filename => ({
-    params: {
-      slug: filename.replace('.md', ''),
-    },
-  }))
+  const paths = await getFileBySlug()
 
   return {
     paths,
@@ -62,17 +54,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }: any) {
-  const markdownWithMetadata = fs.readFileSync(
-    path.join('content/posts/', slug + '.md'),
-    'utf-8'
-  )
-
-  const { data: frontmatter, content } = matter(markdownWithMetadata)
+  const { content, frontmatter } = await getFileWithMetadata(slug)
 
   return {
     props: {
-      frontmatter,
       slug,
+      frontmatter,
       content,
     },
   }

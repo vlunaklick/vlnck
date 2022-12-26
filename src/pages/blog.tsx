@@ -1,11 +1,8 @@
-import matter from 'gray-matter'
-
 import type { NextPage } from 'next'
-import fs from 'fs'
-import path from 'path'
 
 import Post from '../types/post'
 import { sortByDate } from '../utils/sortByDate'
+import { getPosts } from '../lib/mdReader'
 
 import MainLayout from '../components/layouts/MainLayout'
 import CardBlog from '../components/sites/blog/CardBlog'
@@ -13,6 +10,8 @@ import CardBlog from '../components/sites/blog/CardBlog'
 interface Props {
   posts: Post[]
 }
+
+const root = process.cwd()
 
 const Blog: NextPage<Props> = ({ posts }) => {
   posts.sort((a, b) => sortByDate(a.frontmatter.date, b.frontmatter.date))
@@ -32,23 +31,7 @@ const Blog: NextPage<Props> = ({ posts }) => {
 export default Blog
 
 export async function getStaticProps() {
-  const files = fs.readdirSync('content/posts')
-
-  const posts = files.map(filename => {
-    const slug = filename.replace('.md', '')
-
-    const markdownWithMeta = fs.readFileSync(
-      path.join('content/posts', filename),
-      'utf-8'
-    )
-
-    const { data: frontmatter } = matter(markdownWithMeta)
-
-    return {
-      slug,
-      frontmatter,
-    }
-  })
+  const posts = await getPosts()
 
   return {
     props: {
