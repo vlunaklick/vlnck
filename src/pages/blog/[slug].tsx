@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import matter from 'gray-matter'
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
 import fs from 'fs'
 import path from 'path'
 
 import MainLayout from '../../components/layouts/MainLayout'
 import FrontMatter from '../../types/post'
+import ParserMd from '../../components/markdowns/ParserMd'
 
 interface Props {
   frontmatter: FrontMatter
@@ -14,14 +14,12 @@ interface Props {
   content: string
 }
 
-const Post = ({ frontmatter, slug, content }: Props) => {
+const Post = ({ frontmatter, content }: Props) => {
   const formatedDate = new Date(frontmatter.date).toLocaleDateString('en-US', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
   })
-
-  console.log(content)
 
   return (
     <MainLayout>
@@ -39,7 +37,7 @@ const Post = ({ frontmatter, slug, content }: Props) => {
             {frontmatter.title}
           </h1>
           <p className="text-xs mt-2 text-slate-400">{formatedDate}</p>
-          <ReactMarkdown>{content}</ReactMarkdown>
+          <ParserMd>{content}</ParserMd>
         </div>
       </div>
     </MainLayout>
