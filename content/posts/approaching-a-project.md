@@ -1,7 +1,7 @@
 ---
 title: Approaching a project
 date: '2022-09-23'
-description: Welcome to my new blog! As a full stack developer, I'll be sharing my journey and thoughts on all things development. Follow along as I document my experiences and insights, sharing my growth as a developer. Keep an eye out for updates as I share my story with you.
+description: Starting a new project can be intimidating, but having a clear plan in place can help set you up for success. This includes having a clear plan including what to build, tech choices, design, and organization. But what if you could take it one step further and achieve even greater success with your project?
 tags:
   - projects
 ---

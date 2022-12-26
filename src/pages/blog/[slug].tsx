@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { readingTime } from 'reading-time-estimator'
 
 import { getFileWithMetadata, getFileBySlug } from '../../lib/mdReader'
 
@@ -19,6 +20,8 @@ const Post = ({ frontmatter, content }: Props) => {
     year: 'numeric',
   })
 
+  const readingTimeEstimate = readingTime(content)
+
   return (
     <MainLayout>
       <div className="flex flex-col px-4">
@@ -34,7 +37,13 @@ const Post = ({ frontmatter, content }: Props) => {
           <h1 className="text-xl sm:text-3xl font-bold mb-2 mt-5">
             {frontmatter.title}
           </h1>
-          <p className="text-xs mt-2 text-slate-400">{formatedDate}</p>
+          <div className="flex ">
+            <p className="text-xs mt-2 text-slate-400">{formatedDate}</p>
+            <p className="text-xs mt-2 text-slate-400 mx-2">•</p>
+            <p className="text-xs mt-2 text-slate-400">
+              {readingTimeEstimate.text}
+            </p>
+          </div>
           <ParserMd>{content}</ParserMd>
         </div>
       </div>
