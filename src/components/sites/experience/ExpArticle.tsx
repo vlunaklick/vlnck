@@ -12,7 +12,7 @@ interface Props {
 const ExpArticle = ({ start, end, title, place, url, description }: Props) => {
   return (
     <article className="flex flex-col sm:flex-row gap-1.5 sm:gap-2">
-      <p className="text-gray-600 dark:text-slate-400 min-w-[13ch] text-[13px] sm:text-base leading-6 m-0">
+      <p className="text-slate-600 dark:text-slate-400 min-w-[13ch] text-[13px] sm:text-base leading-6 m-0">
         {end !== null && end !== undefined
           ? start + ' — ' + end
           : start.toString()}
@@ -26,7 +26,7 @@ const ExpArticle = ({ start, end, title, place, url, description }: Props) => {
             </a>
           </Link>
         </p>
-        <p className="text-gray-600 dark:text-slate-400 text-xs sm:text-[14px] leading-6 mt-1">
+        <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-[14px] leading-6 mt-1">
           {description}
         </p>
       </div>

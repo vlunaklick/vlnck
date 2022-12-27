@@ -42,7 +42,7 @@ const ArticleProject = ({
       <div className="flex flex-col justify-between gap-3 sm:gap-[13px]">
         <div className="flex flex-col gap-[2px] ">
           <div className="flex gap-2 items-center">
-            <p className="text-gray-800 dark:text-gray-100 text-sm font-semibold">
+            <p className="text-slate-800 dark:text-slate-100 text-sm font-semibold">
               {title}
             </p>
             <Link href={github} passHref>
@@ -51,7 +51,7 @@ const ArticleProject = ({
               </a>
             </Link>
           </div>
-          <p className="text-gray-500 dark:text-gray-400 text-[10.5px] leading-5 sm:leading-4 line-clamp-5">
+          <p className="text-slate-500 dark:text-slate-400 text-[10.5px] leading-5 sm:leading-4 line-clamp-5">
             {description}
           </p>
         </div>

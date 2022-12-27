@@ -42,7 +42,7 @@ html.light {
 html,
 body {
   height: 100%;
-  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
 }
 img,
 picture,
