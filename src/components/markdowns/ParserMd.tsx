@@ -1,6 +1,7 @@
 import Markdown from 'markdown-to-jsx'
 
 import ParagraphMd from './ParagraphMd'
+import PreBlock from './Code'
 
 interface Props {
   children: string
@@ -13,6 +14,9 @@ const ParserMd = ({ children }: Props) => {
         overrides: {
           p: {
             component: ParagraphMd,
+          },
+          pre: {
+            component: PreBlock,
           },
         },
       }}
