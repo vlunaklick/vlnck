@@ -1,12 +1,17 @@
 import type { NextPage } from 'next'
 
 import BodyLayout from '../components/layouts/BodyLayout'
-import WorksSection from '../components/sites/works/WorksSection'
+import MainLayout from '../components/layouts/MainLayout'
+import Title from '../components/app/Title'
+import SectionProject from '../components/sites/projects/SectionProject'
 
 const Projects: NextPage = () => {
   return (
     <BodyLayout>
-      <WorksSection />
+      <MainLayout>
+        <Title>Projects</Title>
+        <SectionProject />
+      </MainLayout>
     </BodyLayout>
   )
 }

@@ -1,11 +1,11 @@
 import { WORKS } from '../../../../content/info/works'
 
-import WorksCard from './WorksCard'
+import ArticleProject from './ArticleProject'
 
-const WorksSection = () => {
+const SectionProject = () => {
   let worksCard = WORKS.map(work => {
     return (
-      <WorksCard
+      <ArticleProject
         key={work.title}
         title={work.title}
         description={work.content}
@@ -17,12 +17,7 @@ const WorksSection = () => {
     )
   })
 
-  return (
-    <section className="flex flex-col gap-4 px-4">
-      <p className="font-medium">Works</p>
-      {worksCard}
-    </section>
-  )
+  return <>{worksCard}</>
 }
 
-export default WorksSection
+export default SectionProject

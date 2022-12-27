@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { BsGithub } from 'react-icons/bs'
 import Link from 'next/link'
 
-import Tag from './Tag'
+import Tag from './TagProject'
 
 interface Props {
   title: string
@@ -12,7 +13,14 @@ interface Props {
   image: string
 }
 
-const WorksCard = ({ title, description, tags, url, github, image }: Props) => {
+const ArticleProject = ({
+  title,
+  description,
+  tags,
+  url,
+  github,
+  image,
+}: Props) => {
   let tagsCards = tags.map(tag => {
     return <Tag key={title + tag} name={tag} />
   })
@@ -23,7 +31,7 @@ const WorksCard = ({ title, description, tags, url, github, image }: Props) => {
         href={url}
         target="_blank"
         className="sm:max-h-36 rounded aspect-video cursor-pointer w-full sm:min-w-max"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         <img
           src={'/images/projects/' + image}
@@ -38,7 +46,7 @@ const WorksCard = ({ title, description, tags, url, github, image }: Props) => {
               {title}
             </p>
             <Link href={github} passHref>
-              <a target="_blank">
+              <a target="_blank" rel="noopener noreferrer">
                 <BsGithub className="h-5" />
               </a>
             </Link>
@@ -53,4 +61,4 @@ const WorksCard = ({ title, description, tags, url, github, image }: Props) => {
   )
 }
 
-export default WorksCard
+export default ArticleProject
