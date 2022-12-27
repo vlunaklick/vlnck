@@ -29,7 +29,7 @@ const CardBlog = ({ slug, title, date, description, tags }: Props) => {
                 {formatedDate}
               </p>
             </div>
-            <p className="text-[10.5px] text-xs leading-5 text-gray-600 dark:text-slate-400 first-letter:capitalize line-clamp-3">
+            <p className="text-[10.5px] text-xs leading-5 text-gray-600 dark:text-slate-400 first-letter:capitalize line-clamp-5 sm:line-clamp-3">
               {description}
             </p>
           </div>

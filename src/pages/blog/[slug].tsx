@@ -34,7 +34,7 @@ const Post = ({ frontmatter, content }: Props) => {
         </div>
 
         <div className="prose dark:prose-invert text-black dark:text-white max-w-none mt-2">
-          <h1 className="text-xl sm:text-3xl font-bold mb-2 mt-5">
+          <h1 className="text-xl sm:text-3xl font-medium mb-2 mt-5">
             {frontmatter.title}
           </h1>
           <div className="flex ">

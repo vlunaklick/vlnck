@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import MainLayout from '../components/layouts/MainLayout'
 import WorksSection from '../components/sites/works/WorksSection'
 
-const Works: NextPage = () => {
+const Projects: NextPage = () => {
   return (
     <MainLayout>
       <WorksSection />
@@ -11,4 +11,4 @@ const Works: NextPage = () => {
   )
 }
 
-export default Works
+export default Projects

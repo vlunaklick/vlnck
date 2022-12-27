@@ -5,50 +5,50 @@
 @tailwind utilities;
 
 html {
-	font-size: 16px;
-	scroll-behavior: smooth;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-	margin: 0;
-	font-family: 'Inter', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 16px;
-	scroll-behavior: smooth;
-	overflow-y: auto;
-	overflow-x: hidden;
-	line-height: 1.5;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+  line-height: 1.5;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-	margin: 0;
+  margin: 0;
 }
 
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 img,
 picture,
 video,
 canvas,
 svg {
-	display: block;
-	max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 p,
@@ -58,14 +58,14 @@ h3,
 h4,
 h5,
 h6 {
-	overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 #root,
 #__next {
-	isolation: isolate;
+  isolation: isolate;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
