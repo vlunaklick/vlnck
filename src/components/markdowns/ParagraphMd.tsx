@@ -3,7 +3,11 @@ interface Props {
 }
 
 const ParagraphMd = ({ children }: Props) => {
-  return <p className="leading-loose text-xs">{children}</p>
+  return (
+    <p className="text-xs sm:text-base dark:text-slate-100 text-slate-800">
+      {children}
+    </p>
+  )
 }
 
 export default ParagraphMd

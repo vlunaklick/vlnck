@@ -9,7 +9,7 @@ interface Props {
   description: string
 }
 
-const ExpArticle = ({ start, end, title, place, url, description }: Props) => {
+const ArticleExp = ({ start, end, title, place, url, description }: Props) => {
   return (
     <article className="flex flex-col sm:flex-row gap-1.5 sm:gap-2">
       <p className="text-slate-600 dark:text-slate-400 min-w-[13ch] text-[13px] sm:text-base leading-6 m-0">
@@ -34,4 +34,4 @@ const ExpArticle = ({ start, end, title, place, url, description }: Props) => {
   )
 }
 
-export default ExpArticle
+export default ArticleExp

@@ -5,16 +5,16 @@ import { EXPERIENCE, EDUCATION } from '../../content/info/experience'
 import BodyLayout from '../components/layouts/BodyLayout'
 import MainLayout from '../components/layouts/MainLayout'
 import Title from '../components/app/Title'
-import ExpSection from '../components/sites/experience/ExpSection'
+import SectionExp from '../components/sites/experience/SectionExp'
 
 const Exp: NextPage = () => {
   return (
     <BodyLayout>
       <MainLayout>
         <Title>Experience</Title>
-        <ExpSection info={EXPERIENCE} />
+        <SectionExp info={EXPERIENCE} />
         <Title>Education</Title>
-        <ExpSection info={EDUCATION} />
+        <SectionExp info={EDUCATION} />
       </MainLayout>
     </BodyLayout>
   )

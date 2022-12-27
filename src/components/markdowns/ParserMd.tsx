@@ -2,6 +2,7 @@ import Markdown from 'markdown-to-jsx'
 
 import ParagraphMd from './ParagraphMd'
 import PreBlock from './Code'
+import AnchorMd from './AnchorMd'
 
 interface Props {
   children: string
@@ -17,6 +18,9 @@ const ParserMd = ({ children }: Props) => {
           },
           pre: {
             component: PreBlock,
+          },
+          a: {
+            component: AnchorMd,
           },
         },
       }}

@@ -1,15 +1,15 @@
 import Experience from '../../../types/experience'
 
-import ExpArticle from './ExpArticle'
+import ArticleExp from './ArticleExp'
 
 interface Props {
   info: Experience[]
 }
 
-const ExpSection = ({ info }: Props) => {
+const SectionExp = ({ info }: Props) => {
   let experience = info.map(exp => {
     return (
-      <ExpArticle
+      <ArticleExp
         key={exp.title + exp.place}
         start={exp.start}
         end={exp.end}
@@ -24,4 +24,4 @@ const ExpSection = ({ info }: Props) => {
   return <>{experience}</>
 }
 
-export default ExpSection
+export default SectionExp
