@@ -6,7 +6,7 @@ interface Props {
 
 const HeadLayout = ({ children }: Props) => {
   return (
-    <div className="dark:bg-slate-900 bg-slate-50 w-full transition-colors">
+    <>
       <Head>
         <title>Valentín Lunaklick</title>
         <meta name="description" content="Valentin Lunaklick's portfolio" />
@@ -16,7 +16,7 @@ const HeadLayout = ({ children }: Props) => {
       </Head>
 
       {children}
-    </div>
+    </>
   )
 }
 

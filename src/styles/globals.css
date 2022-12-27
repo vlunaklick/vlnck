@@ -21,6 +21,14 @@ body {
   line-height: 1.5;
 }
 
+html.dark {
+  background-color: #0f172a;
+}
+
+html.light {
+  background-color: #f8fafc;
+}
+
 *,
 *::before,
 *::after {
@@ -34,6 +42,7 @@ body {
 html,
 body {
   height: 100%;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
 }
 img,
 picture,

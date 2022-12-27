@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 
-import MainLayout from '../components/layouts/MainLayout'
+import BodyLayout from '../components/layouts/BodyLayout'
 import ExpSection from '../components/sites/experience/ExpSection'
 
 const Exp: NextPage = () => {
   return (
-    <MainLayout>
+    <BodyLayout>
       <ExpSection />
-    </MainLayout>
+    </BodyLayout>
   )
 }
 

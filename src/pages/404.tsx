@@ -2,11 +2,11 @@ import Link from 'next/link'
 
 import type { NextPage } from 'next'
 
-import MainLayout from '../components/layouts/MainLayout'
+import BodyLayout from '../components/layouts/BodyLayout'
 
 const Custom404: NextPage = () => {
   return (
-    <MainLayout>
+    <BodyLayout>
       <div className="mx-auto text-center font-bold flex flex-col items-center">
         <p className="text-2xl">Page not found</p>
         <Link href="/">
@@ -16,7 +16,7 @@ const Custom404: NextPage = () => {
           </a>
         </Link>
       </div>
-    </MainLayout>
+    </BodyLayout>
   )
 }
 

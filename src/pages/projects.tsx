@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 
-import MainLayout from '../components/layouts/MainLayout'
+import BodyLayout from '../components/layouts/BodyLayout'
 import WorksSection from '../components/sites/works/WorksSection'
 
 const Projects: NextPage = () => {
   return (
-    <MainLayout>
+    <BodyLayout>
       <WorksSection />
-    </MainLayout>
+    </BodyLayout>
   )
 }
 

@@ -3,7 +3,7 @@ import { readingTime } from 'reading-time-estimator'
 
 import { getFileWithMetadata, getFileBySlug } from '../../lib/mdReader'
 
-import MainLayout from '../../components/layouts/MainLayout'
+import BodyLayout from '../../components/layouts/BodyLayout'
 import FrontMatter from '../../types/post'
 import ParserMd from '../../components/markdowns/ParserMd'
 
@@ -23,7 +23,7 @@ const Post = ({ frontmatter, content }: Props) => {
   const readingTimeEstimate = readingTime(content)
 
   return (
-    <MainLayout>
+    <BodyLayout>
       <div className="flex flex-col px-4">
         <div className="flex flex-col gap-3">
           <Link href="/blog">
@@ -47,7 +47,7 @@ const Post = ({ frontmatter, content }: Props) => {
           <ParserMd>{content}</ParserMd>
         </div>
       </div>
-    </MainLayout>
+    </BodyLayout>
   )
 }
 
