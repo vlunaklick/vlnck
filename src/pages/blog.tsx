@@ -6,6 +6,8 @@ import { getPosts } from '../lib/mdReader'
 
 import BodyLayout from '../components/layouts/BodyLayout'
 import CardBlog from '../components/sites/blog/CardBlog'
+import MainLayout from '../components/layouts/MainLayout'
+import Title from '../components/app/Title'
 
 interface Props {
   posts: Post[]
@@ -16,12 +18,12 @@ const Blog: NextPage<Props> = ({ posts }) => {
 
   return (
     <BodyLayout>
-      <div className="flex flex-col gap-4 px-4">
-        <p className="font-semibold m-0 dark:text-white text-black">Blog</p>
+      <MainLayout>
+        <Title>Blog</Title>
         {posts.map(post => (
           <CardBlog key={post.slug} {...post.frontmatter} slug={post.slug} />
         ))}
-      </div>
+      </MainLayout>
     </BodyLayout>
   )
 }
