@@ -25,34 +25,9 @@ const Nav = () => {
         </a>
       </Link>
       <nav className="flex justify-around items-center gap-3">
-        <NavLinks
-          href={'/'}
-          name={'Home'}
-          asPath={asPath}
-          aria={'Link to home'}
-        />
-
-        <NavLinks
-          href={'/exp'}
-          name={'Experience'}
-          asPath={asPath}
-          aria={'Link to experience'}
-        />
-
-        <NavLinks
-          href={'/projects'}
-          name={'Projects'}
-          asPath={asPath}
-          aria={'Link to projects'}
-        />
-
-        <NavLinks
-          href={'/blog'}
-          name={'Blog'}
-          asPath={asPath}
-          aria={'Link to blog'}
-        />
-
+        {linksNav.map(link => (
+          <NavLinks key={link.name} {...link} asPath={asPath} />
+        ))}
         <ButtonTheme />
       </nav>
     </div>
@@ -60,3 +35,26 @@ const Nav = () => {
 }
 
 export default Nav
+
+const linksNav = [
+  {
+    href: '/',
+    name: 'Home',
+    aria: 'Link to home',
+  },
+  {
+    href: '/exp',
+    name: 'Experience',
+    aria: 'Link to experience',
+  },
+  {
+    href: '/projects',
+    name: 'Projects',
+    aria: 'Link to projects',
+  },
+  {
+    href: '/blog',
+    name: 'Blog',
+    aria: 'Link to blog',
+  },
+]
