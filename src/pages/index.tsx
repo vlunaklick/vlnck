@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 
 import BodyLayout from '../components/layouts/BodyLayout'
 import DescriptionHome from '../components/sites/home/DescriptionHome'
-import Contact from '../components/sites/home/Contact'
+import ContactHome from '../components/sites/home/ContactHome'
 import Title from '../components/app/Title'
 import MainLayout from '../components/layouts/MainLayout'
 
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <MainLayout>
         <Title>Welcome! 👋</Title>
         <DescriptionHome />
-        <Contact />
+        <ContactHome />
       </MainLayout>
     </BodyLayout>
   )

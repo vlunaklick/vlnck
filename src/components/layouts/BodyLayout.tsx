@@ -1,6 +1,6 @@
+import HeadLayout from './HeadLayout'
 import Footer from '../app/Footer'
 import Header from '../app/Header'
-import HeadLayout from './HeadLayout'
 
 interface Props {
   children: React.ReactNode

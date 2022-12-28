@@ -8,7 +8,7 @@ interface Props {
   aria?: string
 }
 
-const ContactLink = ({ name, url, content, download, aria }: Props) => {
+const LinkContactHome = ({ name, url, content, download, aria }: Props) => {
   return (
     <div className="flex gap-5 text-sm sm:text-[14px]">
       <p className="text-slate-600 dark:text-slate-400 min-w-[8ch]">{name}</p>
@@ -27,4 +27,4 @@ const ContactLink = ({ name, url, content, download, aria }: Props) => {
   )
 }
 
-export default ContactLink
+export default LinkContactHome

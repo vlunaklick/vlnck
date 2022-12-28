@@ -1,24 +1,24 @@
-import ContactLink from './ContactLink'
+import LinkContactHome from './LinkContactHome'
 
-const Contact = () => {
+const ContactHome = () => {
   return (
     <div className="flex flex-col gap-3">
       <p className="font-medium text-sm sm:text-base dark:text-slate-50 text-slate-800">
         Contact
       </p>
-      <ContactLink
+      <LinkContactHome
         name="LinkedIn"
         url="https://www.linkedin.com/in/vlunaklick/"
         content="Valentín Lunaklick"
         aria="Link to my LinkedIn profile"
       />
-      <ContactLink
+      <LinkContactHome
         name="Github"
         url="https://github.com/vlunaklick"
         content="vlunaklick"
         aria="Link to my Github profile"
       />
-      <ContactLink
+      <LinkContactHome
         name="Resume"
         url="valentin-lunaklick-resume.pdf"
         download="valentin-lunaklick-resume"
@@ -29,4 +29,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default ContactHome

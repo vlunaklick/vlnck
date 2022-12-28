@@ -3,9 +3,9 @@ import { readingTime } from 'reading-time-estimator'
 
 import { getFileWithMetadata, getFileBySlug } from '../../lib/mdReader'
 import { formatDate } from '../../utils/formatDate'
+import FrontMatter from '../../types/post'
 
 import BodyLayout from '../../components/layouts/BodyLayout'
-import FrontMatter from '../../types/post'
 import ParserMd from '../../components/markdowns/ParserMd'
 import MainLayout from '../../components/layouts/MainLayout'
 
@@ -30,10 +30,10 @@ const Post = ({ frontmatter, content }: Props) => {
         </Link>
         <header>
           <h1 className="text-4xl font-semibold">{frontmatter.title}</h1>
-          <div className="flex mt-2">
-            <p className="text-xs text-slate-400">{formatedDate}</p>
-            <p className="text-xs text-slate-400 mx-1">•</p>
-            <p className="text-xs text-slate-400">{readingTimeEstimate.text}</p>
+          <div className="flex mt-2 gap-1 text-xs text-slate-500 dark:text-slate-400">
+            <p>{formatedDate}</p>
+            <p>•</p>
+            <p>{readingTimeEstimate.text}</p>
           </div>
         </header>
         <div className="">

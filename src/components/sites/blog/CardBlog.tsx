@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import { formatDate } from '../../../utils/formatDate'
 
 interface Props {
@@ -18,7 +19,7 @@ const CardBlog = ({ slug, title, date, description, tags }: Props) => {
         <h3 className="font-medium first-letter:capitalize text-lg text-slate-700 dark:text-slate-100">
           {title}
         </h3>
-        <p className="first-letter:capitalize text-xs text-slate-800 dark:text-slate-400">
+        <p className="first-letter:capitalize text-xs text-slate-500 dark:text-slate-400">
           {formatedDate}
         </p>
         <p className="text-sm leading-loose text-slate-600 dark:text-slate-300 first-letter:capitalize line-clamp-5 sm:line-clamp-3">

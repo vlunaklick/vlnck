@@ -11,7 +11,7 @@ interface Props {
 
 const ArticleExp = ({ start, end, title, place, url, description }: Props) => {
   return (
-    <article className="flex flex-col sm:flex-row gap-1.5 sm:gap-2">
+    <article className="flex flex-col sm:flex-row sm:gap-1.5">
       <p className="text-slate-800 dark:text-slate-400 min-w-[13ch] text-[13px] sm:text-base leading-loose m-0">
         {end !== null && end !== undefined
           ? start + ' — ' + end
