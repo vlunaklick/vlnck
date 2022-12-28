@@ -38,7 +38,7 @@ const Post = ({ frontmatter, content }: Props) => {
             </p>
           </div>
         </header>
-        <div className="prose dark:prose-invert">
+        <div className="">
           <ParserMd>{content}</ParserMd>
         </div>
       </MainLayout>

@@ -4,7 +4,6 @@ interface Props {
 }
 
 const AnchorMd = (props: Props) => {
-  console.log(props.children[0])
   return (
     <a
       href={props.href}
