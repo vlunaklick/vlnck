@@ -44,22 +44,33 @@ const ArticleProject = ({
         <h3 className="text-slate-800 dark:text-slate-100 font-medium first-letter:capitalize text-lg">
           {title}
         </h3>
-        <div className="flex gap-2 first-letter:capitalize text-xs text-slate-500 dark:text-slate-400">
+
+        <p className="text-sm leading-loose text-slate-600 dark:text-slate-300 first-letter:capitalize">
+          {description}
+        </p>
+        <div className="flex gap-2 first-letter:capitalize text-xs text-blue-500">
           <Link href={url} passHref>
-            <a target="_blank" rel="noopener noreferrer" aria-label="Live view">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Live view"
+              className="hover:text-blue-400"
+            >
               Live view
             </a>
           </Link>
           <p>•</p>
           <Link href={github} passHref>
-            <a target="_blank" rel="noopener noreferrer" aria-label="Code">
-              Code
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Github"
+              className="hover:text-blue-400"
+            >
+              Github
             </a>
           </Link>
         </div>
-        <p className="text-sm leading-loose text-slate-600 dark:text-slate-300 first-letter:capitalize">
-          {description}
-        </p>
       </div>
     </article>
   )

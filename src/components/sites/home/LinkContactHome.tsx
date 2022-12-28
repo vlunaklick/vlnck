@@ -14,7 +14,7 @@ const LinkContactHome = ({ name, url, content, download, aria }: Props) => {
       <p className="text-slate-600 dark:text-slate-400 min-w-[8ch]">{name}</p>
       <Link href={url} passHref>
         <a
-          className="text-slate-900 dark:text-slate-50 font-medium underline"
+          className="hover:text-blue-500 dark:hover:text-blue-500 text-slate-900 dark:text-slate-50 font-medium underline"
           target="_blank"
           rel="noopener noreferrer"
           download={download ? download : undefined}

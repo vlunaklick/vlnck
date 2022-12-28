@@ -24,7 +24,7 @@ const Post = ({ frontmatter, content }: Props) => {
     <BodyLayout>
       <MainLayout>
         <Link href="/blog">
-          <a className="text-xs text-slate-600 dark:text-slate-300">
+          <a className="text-xs text-slate-400 dark:text-slate-500 w-max">
             ← Back to blog
           </a>
         </Link>
