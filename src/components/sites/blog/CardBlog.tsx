@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { formatDate } from '../../../utils/formatDate'
 
 interface Props {
   slug: string
@@ -9,31 +10,25 @@ interface Props {
 }
 
 const CardBlog = ({ slug, title, date, description, tags }: Props) => {
-  const formatedDate = new Date(date).toLocaleDateString('en-US', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  })
+  const formatedDate = formatDate(date)
 
   return (
     <Link href={'/blog/' + slug}>
-      <a>
-        <article className="w-full rounded flex mt-5 sm:mt-0 flex-col gap-3 cursor-pointer">
-          <div className="flex flex-col gap-1">
-            <div className="flex gap-1 sm:gap-3 text-sm sm:text-[13.5px] sm:flex-row flex-col">
-              <h3 className="font-semibold first-letter:capitalize text-xs sm:text-sm">
-                {title}
-              </h3>
-              <p className="first-letter:capitalize text-[10.5px] sm:text-[13.5px] text-gray-500 dark:text-slate-400">
-                <span className="hidden sm:inline">— </span>
-                {formatedDate}
-              </p>
-            </div>
-            <p className="text-[10.5px] text-xs leading-5 text-gray-600 dark:text-slate-400 first-letter:capitalize line-clamp-3">
-              {description}
-            </p>
-          </div>
-        </article>
+      <a className="pointer-events-none sm:pointer-events-auto sm:p-4 w-full rounded flex mt-5 sm:mt-0 flex-col gap-1 cursor-pointer sm:hover:dark:bg-slate-800 sm:hover:bg-slate-100 transition-colors sm:hover:shadow-sm">
+        <h3 className="font-medium first-letter:capitalize text-lg text-slate-800 dark:text-slate-100">
+          {title}
+        </h3>
+        <p className="first-letter:capitalize text-xs text-slate-800 dark:text-slate-200">
+          {formatedDate}
+        </p>
+        <p className="text-sm leading-5 text-slate-600 dark:text-slate-400 first-letter:capitalize line-clamp-5 sm:line-clamp-3">
+          {description}
+        </p>
+        <Link href={'/blog/' + slug}>
+          <a className="text-sm sm:hidden text-slate-800 dark:text-slate-50 sm:pointer-events-none pointer-events-auto">
+            Read more →
+          </a>
+        </Link>
       </a>
     </Link>
   )

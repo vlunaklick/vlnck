@@ -1,13 +1,22 @@
 import type { NextPage } from 'next'
 
+import { EXPERIENCE, EDUCATION } from '../../content/info/experience'
+
+import BodyLayout from '../components/layouts/BodyLayout'
 import MainLayout from '../components/layouts/MainLayout'
-import ExpSection from '../components/sites/experience/ExpSection'
+import Title from '../components/app/Title'
+import SectionExp from '../components/sites/experience/SectionExp'
 
 const Exp: NextPage = () => {
   return (
-    <MainLayout>
-      <ExpSection />
-    </MainLayout>
+    <BodyLayout>
+      <MainLayout>
+        <Title>Experience</Title>
+        <SectionExp info={EXPERIENCE} />
+        <Title>Education</Title>
+        <SectionExp info={EDUCATION} />
+      </MainLayout>
+    </BodyLayout>
   )
 }
 
