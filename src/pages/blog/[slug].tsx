@@ -25,7 +25,7 @@ const Post = ({ frontmatter, content }: Props) => {
       <MainLayout>
         <Link href="/blog">
           <a className="text-xs text-slate-600 dark:text-slate-300">
-            ← Back to posts
+            ← Back to blog
           </a>
         </Link>
         <header>

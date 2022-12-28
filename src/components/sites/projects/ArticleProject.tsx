@@ -26,36 +26,52 @@ const ArticleProject = ({
   })
 
   return (
-    <article className="bg-slate-100 dark:bg-slate-800 sm:px-[11px] sm:py-[13px] rounded flex sm:flex-row flex-col p-4 gap-[14px] justify-center">
-      <a
+    <article className="transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 p-4 rounded flex sm:flex-row flex-col gap-4 justify-center">
+      {/* <a
         href={url}
         target="_blank"
         className="sm:max-h-36 rounded aspect-video cursor-pointer w-full sm:min-w-max"
         rel="noopener noreferrer"
       >
-        <img
-          src={'/images/projects/' + image}
-          alt={title}
-          className="w-full h-full"
-        />
-      </a>
-      <div className="flex flex-col justify-between gap-3 sm:gap-[13px]">
-        <div className="flex flex-col gap-[2px] ">
-          <div className="flex gap-2 items-center">
-            <p className="text-slate-800 dark:text-slate-100 text-sm font-semibold">
-              {title}
-            </p>
-            <Link href={github} passHref>
-              <a target="_blank" rel="noopener noreferrer">
-                <BsGithub className="h-5" />
-              </a>
-            </Link>
-          </div>
-          <p className="text-slate-500 dark:text-slate-400 text-[10.5px] leading-5 sm:leading-4 line-clamp-5">
-            {description}
-          </p>
+        <picture>
+          <img
+            src={'/images/projects/' + image}
+            alt={title}
+            className="w-full h-full"
+          />
+        </picture>
+      </a> */}
+      <div className="flex flex-col justify-between">
+        <div className="flex gap-2 items-center">
+          <h3 className="text-slate-800 dark:text-slate-100 font-medium first-letter:capitalize text-lg">
+            {title}
+          </h3>
+          <Link href={url} passHref>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Live view"
+              className="text-xs text-slate-400"
+            >
+              Live view
+            </a>
+          </Link>
+          <p className="text-xs text-slate-400">•</p>
+          <Link href={github} passHref>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Code"
+              className="text-xs text-slate-400"
+            >
+              Code
+            </a>
+          </Link>
         </div>
-        <div className="flex flex-row gap-2 flex-wrap">{tagsCards}</div>
+        <p className="text-sm leading-5 text-slate-600 dark:text-slate-400 first-letter:capitalize">
+          {description}
+        </p>
+        <div className="flex flex-row gap-2 flex-wrap mt-2">{tagsCards}</div>
       </div>
     </article>
   )

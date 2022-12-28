@@ -18,7 +18,7 @@ const ArticleExp = ({ start, end, title, place, url, description }: Props) => {
           : start.toString()}
       </p>
       <div>
-        <p className="text-[13px] sm:text-base dark:text-white text-black font-medium leading-6 m-0">
+        <p className="text-sm sm:text-base dark:text-white text-black font-medium leading-6 m-0">
           {title} at{' '}
           <Link href={url} passHref>
             <a target="_blank" className="underline">
@@ -26,7 +26,7 @@ const ArticleExp = ({ start, end, title, place, url, description }: Props) => {
             </a>
           </Link>
         </p>
-        <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-[14px] leading-6 mt-1">
+        <p className="text-slate-600 dark:text-slate-400 text-[13px] sm:text-[14px] mt-1 leading-7">
           {description}
         </p>
       </div>
