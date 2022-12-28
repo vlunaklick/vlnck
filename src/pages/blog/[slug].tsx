@@ -30,12 +30,10 @@ const Post = ({ frontmatter, content }: Props) => {
         </Link>
         <header>
           <h1 className="text-4xl font-semibold">{frontmatter.title}</h1>
-          <div className="flex">
-            <p className="text-xs mt-2 text-slate-400">{formatedDate}</p>
-            <p className="text-xs mt-2 text-slate-400 mx-1">•</p>
-            <p className="text-xs mt-2 text-slate-400">
-              {readingTimeEstimate.text}
-            </p>
+          <div className="flex mt-2">
+            <p className="text-xs text-slate-400">{formatedDate}</p>
+            <p className="text-xs text-slate-400 mx-1">•</p>
+            <p className="text-xs text-slate-400">{readingTimeEstimate.text}</p>
           </div>
         </header>
         <div className="">
