@@ -25,7 +25,7 @@ const ArticleProject = ({
   })
 
   return (
-    <article className="transition-colors sm:hover:bg-slate-100 sm:dark:hover:bg-slate-800 sm:hover:shadow-sm sm:p-4 rounded flex sm:flex-row flex-col gap-4 justify-center sm:mt-0 mt-5">
+    <article className="transition-all sm:hover:bg-slate-100 sm:dark:hover:bg-slate-800 sm:hover:shadow-sm sm:p-4 rounded flex sm:flex-row flex-col gap-4 justify-center sm:mt-0 mt-5 sm:hover:-translate-y-1">
       {/* <a
         href={url}
         target="_blank"

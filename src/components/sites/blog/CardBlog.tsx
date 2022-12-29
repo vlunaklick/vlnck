@@ -16,7 +16,7 @@ const CardBlog = ({ slug, title, date, description, tags }: Props) => {
   return (
     <article>
       <Link href={'/blog/' + slug}>
-        <a className="pointer-events-none sm:pointer-events-auto sm:p-4 w-full rounded flex mt-5 sm:mt-0 flex-col gap-1 cursor-pointer sm:hover:dark:bg-slate-800 sm:hover:bg-slate-100 transition-colors sm:hover:shadow-sm">
+        <a className="pointer-events-none sm:pointer-events-auto sm:p-4 w-full rounded flex mt-5 sm:mt-0 flex-col gap-1 cursor-pointer sm:hover:dark:bg-slate-800 sm:hover:bg-slate-100 sm:hover:shadow-sm transition-all hover:-translate-y-1">
           <h3 className="font-medium first-letter:capitalize text-lg text-slate-700 dark:text-slate-100">
             {title}
           </h3>
