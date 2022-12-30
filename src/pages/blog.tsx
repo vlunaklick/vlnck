@@ -14,13 +14,16 @@ interface Props {
 }
 
 const Blog: NextPage<Props> = ({ posts }) => {
-  posts.sort((a, b) => sortByDate(a.frontmatter.date, b.frontmatter.date))
+  console.log(posts)
+  const validPosts = posts.filter(post => post.frontmatter.published)
+
+  validPosts.sort((a, b) => sortByDate(a.frontmatter.date, b.frontmatter.date))
 
   return (
     <BodyLayout>
       <MainLayout>
         <Title>Blog</Title>
-        {posts.map(post => (
+        {validPosts.map(post => (
           <CardBlog key={post.slug} {...post.frontmatter} slug={post.slug} />
         ))}
       </MainLayout>

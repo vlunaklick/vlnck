@@ -4,6 +4,7 @@ date: '2022-09-23'
 description: Starting a new project can be intimidating, but having a clear plan in place, including what to build, tech choices, design, and organization, can set you up for success. Want to take it one step further and achieve even greater success?
 tags:
   - projects
+published: true
 ---
 
 Welcome back guys! In this post, we will talk about how I take my first steps whenever I start a new project. Just for you to know, I have been developing for around a year, so maybe I’m not the most indicated person to give tips. I don’t say this as a holy word! That being said, I hope it helps somebody as it helps me. Let’s go!
