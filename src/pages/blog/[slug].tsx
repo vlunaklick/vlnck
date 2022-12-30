@@ -58,6 +58,12 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { slug } }: any) {
   const { content, frontmatter } = await getFileWithMetadata(slug)
 
+  if (!frontmatter.published) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
     props: {
       slug,
