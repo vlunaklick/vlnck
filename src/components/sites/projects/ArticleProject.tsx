@@ -48,7 +48,7 @@ const ArticleProject = ({
         <p className="text-sm leading-loose text-slate-600 dark:text-slate-300 first-letter:capitalize">
           {description}
         </p>
-        <div className="flex gap-2 first-letter:capitalize text-xs text-blue-500">
+        <div className="flex gap-2 first-letter:capitalize text-sm text-blue-500">
           <Link href={url} passHref>
             <a
               target="_blank"
