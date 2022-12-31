@@ -9,7 +9,7 @@ interface Props {
 const Code = ({ children, className }: Props) => {
   if (!className) {
     return (
-      <code className="text-sm font-mono dark:text-slate-900 text-slate-100 bg-gray-600 rounded-sm dark:bg-slate-100 py-[2px] px-1">
+      <code className="rounded-sm bg-gray-600 py-[2px] px-1 font-mono text-sm text-slate-100 dark:bg-slate-100 dark:text-slate-900">
         {children}
       </code>
     )

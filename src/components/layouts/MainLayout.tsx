@@ -4,7 +4,7 @@ interface Props {
 
 const MainLayout = ({ children }: Props) => {
   return (
-    <main className="px-4 flex flex-col gap-4 max-w-2xl mx-auto">
+    <main className="mx-auto flex max-w-2xl flex-col gap-4 px-4">
       {children}
     </main>
   )

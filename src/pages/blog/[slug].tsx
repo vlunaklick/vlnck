@@ -24,21 +24,21 @@ const Post = ({ frontmatter, content }: Props) => {
     <BodyLayout>
       <MainLayout>
         <Link href="/blog">
-          <a className="text-xs text-slate-400 dark:text-slate-500 w-max">
+          <a className="w-max text-xs text-slate-400 dark:text-slate-500">
             ← Back to blog
           </a>
         </Link>
-        <header>
-          <h1 className="text-4xl font-semibold">{frontmatter.title}</h1>
-          <div className="flex mt-2 gap-1 text-xs text-slate-500 dark:text-slate-400">
-            <p>{formatedDate}</p>
-            <p>•</p>
-            <p>{readingTimeEstimate.text}</p>
-          </div>
-        </header>
-        <div className="">
+        <article>
+          <header className="mb-4">
+            <h1 className="text-4xl font-semibold">{frontmatter.title}</h1>
+            <div className="mt-2 flex gap-1 text-xs text-slate-500 dark:text-slate-400">
+              <p>{formatedDate}</p>
+              <p>•</p>
+              <p>{readingTimeEstimate.text}</p>
+            </div>
+          </header>
           <ParserMd>{content}</ParserMd>
-        </div>
+        </article>
       </MainLayout>
     </BodyLayout>
   )

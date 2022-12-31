@@ -9,22 +9,22 @@ const Nav = () => {
   const { asPath } = useRouter()
 
   return (
-    <div className="max-w-2xl mx-auto flex w-full items-center p-4 justify-between">
+    <div className="mx-auto flex w-full max-w-2xl items-center justify-between p-4">
       <Link href={'/'}>
-        <a className="flex items-center gap-2 hover:scale-105 transition-transform">
+        <a className="flex items-center gap-2 transition-transform hover:scale-105">
           <picture>
             <img
               src={'/images' + '/icon-me.png'}
               alt="My emoji"
-              className="rounded-full w-10 cursor-pointer"
+              className="w-10 cursor-pointer rounded-full"
             />
           </picture>
-          <h1 className={'font-bold text-xl sm:text-3xl hidden sm:block'}>
+          <h1 className={'hidden text-xl font-bold sm:block sm:text-3xl'}>
             Vlnck
           </h1>
         </a>
       </Link>
-      <nav className="flex justify-around items-center gap-3">
+      <nav className="flex items-center justify-around gap-3">
         {linksNav.map(link => (
           <NavLinks key={link.name} {...link} asPath={asPath} />
         ))}

@@ -3,7 +3,7 @@ import LinkContactHome from './LinkContactHome'
 const ContactHome = () => {
   return (
     <div className="flex flex-col gap-3">
-      <p className="font-medium text-sm sm:text-base dark:text-slate-50 text-slate-800">
+      <p className="text-sm font-medium text-slate-800 dark:text-slate-50 sm:text-base">
         Contact
       </p>
       <LinkContactHome

@@ -8,7 +8,7 @@ const ButtonTheme = () => {
   return (
     <button
       className={
-        'border text-xs dark:border-slate-500 p-2 dark:bg-slate-900 bg-slate-50 rounded text-slate-800 dark:text-slate-200'
+        'rounded border bg-slate-50 p-2 text-xs text-slate-800 dark:border-slate-500 dark:bg-slate-900 dark:text-slate-200'
       }
       onClick={toggleTheme}
     >

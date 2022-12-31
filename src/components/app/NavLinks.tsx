@@ -11,11 +11,11 @@ const NavLinks = ({ name, href, asPath, aria }: Props) => {
   return (
     <Link href={href}>
       <a
-        className={`text-xs sm:text-sm text-center capitalize text-slate-800 dark:text-slate-400 border-transparent ${
+        className={`border-transparent text-center text-xs capitalize text-slate-800 dark:text-slate-400 sm:text-sm ${
           asPath === href
             ? 'border-current'
-            : 'hover:border-current transition-colors'
-        } border-b relative group`}
+            : 'transition-colors hover:border-current'
+        } group relative border-b`}
         rel="noopener noreferrer"
         aria-label={aria}
       >

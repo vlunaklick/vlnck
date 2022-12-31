@@ -7,12 +7,12 @@ import BodyLayout from '../components/layouts/BodyLayout'
 const Custom404: NextPage = () => {
   return (
     <BodyLayout>
-      <div className="mx-auto text-center font-bold flex flex-col items-center">
+      <div className="mx-auto flex flex-col items-center text-center font-bold">
         <p className="text-2xl">Page not found</p>
         <Link href="/">
-          <a className="text-slate-400 text-sm font-medium group max-w-min">
+          <a className="group max-w-min text-sm font-medium text-slate-400">
             Home
-            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-slate-200" />
+            <span className="block h-[2px] max-w-0 bg-slate-200 transition-all duration-500 group-hover:max-w-full" />
           </a>
         </Link>
       </div>

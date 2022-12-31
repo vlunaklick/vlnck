@@ -1,6 +1,6 @@
 const DescriptionHome = () => {
   return (
-    <section className="flex flex-col text-sm sm:text-[14px] leading-6 dark:text-white text-black w-full prose dark:prose-invert max-w-none">
+    <section className="prose flex w-full max-w-none flex-col text-sm leading-6 text-black dark:prose-invert dark:text-white sm:text-[14px]">
       <p>
         I am Valentín, a Fullstack developer oriented in Frontend from Buenos
         Aires, Argentina.
