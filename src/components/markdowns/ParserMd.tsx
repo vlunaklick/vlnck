@@ -1,10 +1,11 @@
 import Markdown from 'markdown-to-jsx'
 
 import ParagraphMd from './ParagraphMd'
-import PreBlock from './Code'
+import PreBlock from './PreMd'
 import AnchorMd from './AnchorMd'
 import HeadingMd from './HeadingMd'
 import BlockquoteMd from './BlockquoteMd'
+import Code from './CodeMd'
 
 interface Props {
   children: string
@@ -26,6 +27,9 @@ const ParserMd = ({ children }: Props) => {
           },
           blockquote: {
             component: BlockquoteMd,
+          },
+          code: {
+            component: Code,
           },
           h1: {
             component: HeadingMd,

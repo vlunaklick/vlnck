@@ -7,6 +7,14 @@ interface Props {
 }
 
 const Code = ({ children, className }: Props) => {
+  if (!className) {
+    return (
+      <code className="text-sm font-mono dark:text-slate-900 text-slate-100 bg-gray-600 rounded-sm dark:bg-slate-100 py-[2px] px-1">
+        {children}
+      </code>
+    )
+  }
+
   const language = className?.replace(/lang-/, '')
 
   return (
@@ -27,17 +35,4 @@ const Code = ({ children, className }: Props) => {
   )
 }
 
-interface PreBlock {
-  children: React.ReactNode
-}
-
-const PreBlock = ({ children, ...rest }: PreBlock) => {
-  // @ts-ignore
-  if ('type' in children && children['type'] === 'code') {
-    // @ts-ignore
-    return Code(children['props'])
-  }
-  return <pre {...rest}>{children}</pre>
-}
-
-export default PreBlock
+export default Code
