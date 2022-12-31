@@ -14,7 +14,6 @@ interface Props {
 }
 
 const Blog: NextPage<Props> = ({ posts }) => {
-  console.log(posts)
   const validPosts = posts.filter(post => post.frontmatter.published)
 
   validPosts.sort((a, b) => sortByDate(a.frontmatter.date, b.frontmatter.date))

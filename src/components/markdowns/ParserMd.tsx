@@ -6,6 +6,7 @@ import AnchorMd from './AnchorMd'
 import HeadingMd from './HeadingMd'
 import BlockquoteMd from './BlockquoteMd'
 import Code from './CodeMd'
+import AlertMd from './AlertMd'
 
 interface Props {
   children: string
@@ -30,6 +31,9 @@ const ParserMd = ({ children }: Props) => {
           },
           code: {
             component: Code,
+          },
+          AlertMd: {
+            component: AlertMd,
           },
           h1: {
             component: HeadingMd,
