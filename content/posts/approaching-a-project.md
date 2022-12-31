@@ -1,6 +1,6 @@
 ---
 title: Approaching a project
-date: '2022-09-23'
+date: '2022-09-22'
 description: Starting a new project can be intimidating, but having a clear plan in place, including what to build, tech choices, design, and organization, can set you up for success. Want to take it one step further and achieve even greater success?
 tags:
   - projects

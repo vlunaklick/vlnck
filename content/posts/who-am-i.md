@@ -1,6 +1,6 @@
 ---
 title: Who am I?
-date: '2022-09-21'
+date: '2022-09-20'
 description: Welcome to my new blog! As a full stack developer, I'll be sharing my journey and thoughts on all things development. Follow along as I document my experiences and insights, sharing my growth as a developer. Keep an eye out for updates as I share my story with you.
 tags:
   - me

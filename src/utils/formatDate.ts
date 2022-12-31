@@ -3,7 +3,7 @@ export const formatDate = (date: string) => {
   const month = dateObject.toLocaleString('en-US', { month: 'long' })
   const day = dateObject.getDate()
   const year = dateObject.getFullYear()
-  const formatedDate = `${day} ${month} ${year}`
+  const formatedDate = `${day + 1} ${month} ${year}`
 
   return formatedDate
 }
