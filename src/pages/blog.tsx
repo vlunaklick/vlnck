@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import type { NextPage } from 'next'
 
 import Post from '../types/post'
@@ -20,6 +22,9 @@ const Blog: NextPage<Props> = ({ posts }) => {
 
   return (
     <BodyLayout>
+      <Head>
+        <title>{'Valentín Lunaklick — Blog'}</title>
+      </Head>
       <MainLayout>
         <Title>Blog</Title>
         {validPosts.map(post => (

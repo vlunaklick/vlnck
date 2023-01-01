@@ -1,17 +1,17 @@
 ---
 title: Who am I?
 date: '2022-09-20'
-description: Welcome to my new blog! As a full stack developer, I'll be sharing my journey and thoughts on all things development. Follow along as I document my experiences and insights, sharing my growth as a developer. Keep an eye out for updates as I share my story with you.
+description: Welcome to my new blog! I'm a full stack developer and will be sharing my journey and thoughts on all things development. Follow along as I document my experiences and insights, and check back for updates on my growth as a developer.
 tags:
   - me
 published: true
 ---
 
-Welcome! This is going to be the first post in my _new blog_, here I’m going to post my path as a developer and some curious facts and moments of my life. So, for you to know me a bit better, I’m a full stack developer working more for the backend side, but I still do frontend in my regular days since I really like it and I don’t want to lose my “skills”, ~~if you can call them like that~~ 😂. I started programming 1 year or so ago, I rush it as fast as I could for 3 months while doing collage, moment where I got the famous “burnout” 🥵 and, by the end of 2021, I resumed my journey improving old projects.
+Hello everyone! My name is Valentín and I'm a full-stack developer with a focus on frontend development, although I'm currently working more on the backend side. I began programming about a year ago and initially threw myself into it, studying intensely for three months while also attending college. However, I eventually experienced burnout and took a break. By the end of 2021, I resumed my journey in programming, improving on old projects and learning new skills like Node.js, Express.js, MongoDB, and more.
 
-This new one will help me to improve my vocabulary, the way I dwell and also to make a kind of diary so I can see my journey in a future.
+I created this blog to share my experiences and thoughts as I continue learning and growing as a developer. It also gives me the opportunity to improve my writing skills and expand my vocabulary, as English is not my native language.
 
-That’s it for now, I hope you have a great time reading all the things I’m going to publish here.
+That's all for now. I hope you enjoy reading my posts and stay tuned for updates as I share my journey with you.
 
 Thanks for your time,
 

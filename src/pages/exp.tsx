@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import type { NextPage } from 'next'
 
 import { EXPERIENCE, EDUCATION } from '../../content/info/experience'
@@ -10,6 +12,9 @@ import SectionExp from '../components/sites/experience/SectionExp'
 const Exp: NextPage = () => {
   return (
     <BodyLayout>
+      <Head>
+        <title>{'Valentín Lunaklick — Experience'}</title>
+      </Head>
       <MainLayout>
         <Title>Experience</Title>
         <SectionExp info={EXPERIENCE} />
