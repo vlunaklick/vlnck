@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import { readingTime } from 'reading-time-estimator'
+import Head from 'next/head'
 
 import { getFileWithMetadata, getFileBySlug } from '../../lib/mdReader'
 import { formatDate } from '../../utils/formatDate'
 import FrontMatter from '../../types/post'
 
-import BodyLayout from '../../components/layouts/BodyLayout'
 import ParserMd from '../../components/markdowns/ParserMd'
 import MainLayout from '../../components/layouts/MainLayout'
+import BodyLayout from '../../components/layouts/BodyLayout'
 
 interface Props {
   frontmatter: FrontMatter
@@ -21,26 +22,32 @@ const Post = ({ frontmatter, content }: Props) => {
   const readingTimeEstimate = readingTime(content)
 
   return (
-    <BodyLayout>
-      <MainLayout>
-        <Link href="/blog">
-          <a className="w-max text-xs text-slate-400 dark:text-slate-500">
-            ← Back to blog
-          </a>
-        </Link>
-        <article>
-          <header className="mb-4">
-            <h1 className="text-4xl font-semibold">{frontmatter.title}</h1>
-            <div className="mt-2 flex gap-1 text-xs text-slate-500 dark:text-slate-400">
-              <p>{formatedDate}</p>
-              <p>•</p>
-              <p>{readingTimeEstimate.text}</p>
-            </div>
-          </header>
-          <ParserMd>{content}</ParserMd>
-        </article>
-      </MainLayout>
-    </BodyLayout>
+    <>
+      <BodyLayout>
+        <Head>
+          <title>{frontmatter.title}</title>
+          <meta name="description" content={frontmatter.description} />
+        </Head>
+        <MainLayout>
+          <Link href="/blog">
+            <a className="w-max text-xs text-slate-400 dark:text-slate-500">
+              ← Back to blog
+            </a>
+          </Link>
+          <article>
+            <header className="mb-4">
+              <h1 className="text-4xl font-semibold">{frontmatter.title}</h1>
+              <div className="mt-2 flex gap-1 text-xs text-slate-500 dark:text-slate-400">
+                <p>{formatedDate}</p>
+                <p>•</p>
+                <p>{readingTimeEstimate.text}</p>
+              </div>
+            </header>
+            <ParserMd>{content}</ParserMd>
+          </article>
+        </MainLayout>
+      </BodyLayout>
+    </>
   )
 }
 

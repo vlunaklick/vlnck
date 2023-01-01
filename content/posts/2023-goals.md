@@ -1,7 +1,7 @@
 ---
-title: 2023 Goals
+title: My 2023 Goals
 date: '2022-12-31'
-description: Reflecting on a great year and setting tech goals for the future, as 2022 comes to a close, join me in reflecting on the year's personal and professional growth and setting goals for the tech challenges ahead.
+description: As 2022 comes to a close, join me in reflecting on the year's personal and professional growth and setting goals for the tech challenges ahead.
 tags:
   - New Years
 published: true

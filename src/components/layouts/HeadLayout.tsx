@@ -9,10 +9,25 @@ const HeadLayout = ({ children }: Props) => {
     <>
       <Head>
         <title>Valentín Lunaklick</title>
-        <meta name="description" content="Valentin Lunaklick's portfolio" />
         <link rel="icon" href="/favicon/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon/logo192.png" />
-        <meta name="theme-color" content="#000000" />
+        <link rel="apple-touch-icon" sizes="" href="/favicon/logo192.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
+        <meta name="description" content="Vlnck developer" />
+        <meta name="application-name" content="Valentín Lunaklick" />
+        <meta name="apple-mobile-web-app-title" content="Valentín Lunaklick" />
+        <meta name="manifest" content="/seo/manifest.json" />
+        <meta name="theme-color" content="#50C878" />
       </Head>
 
       {children}
