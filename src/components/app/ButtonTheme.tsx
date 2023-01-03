@@ -1,9 +1,15 @@
 import { BsSun, BsMoon } from 'react-icons/bs'
+import { useState, useEffect } from 'react'
 
 import { useThemes } from '../../hooks/useThemes'
 
 const ButtonTheme = () => {
   const { theme, toggleTheme } = useThemes()
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    setIsDark(theme === 'dark')
+  }, [theme])
 
   return (
     <button
@@ -16,16 +22,16 @@ const ButtonTheme = () => {
         className={
           'absolute transition-transform duration-300' +
           ' ' +
-          (theme === 'light' ? 'translate-y-0' : '-translate-y-6')
+          (!isDark ? 'translate-y-0' : '-translate-y-6')
         }
       >
         <BsMoon />
       </div>
       <div
         className={
-          'absolute transition-transform duration-300' +
+          'absolute transition-transform duration-300 ' +
           ' ' +
-          (theme === 'dark' ? 'translate-y-0' : 'translate-y-6')
+          (isDark ? 'translate-y-0' : 'translate-y-6')
         }
       >
         <BsSun />
