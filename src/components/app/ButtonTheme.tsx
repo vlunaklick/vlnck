@@ -7,6 +7,7 @@ const ButtonTheme = () => {
 
   return (
     <button
+      aria-label="Toggle theme"
       className={
         'relative flex items-center justify-center overflow-hidden rounded border bg-slate-50 p-3 text-xs text-slate-800 dark:border-slate-500 dark:bg-slate-900 dark:text-slate-200'
       }
