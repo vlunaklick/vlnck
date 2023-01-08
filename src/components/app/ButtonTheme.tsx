@@ -1,9 +1,19 @@
+import { useState, useEffect } from 'react'
 import { BsSun, BsMoon } from 'react-icons/bs'
+
 
 import { useThemes } from '../../hooks/useThemes'
 
 const ButtonTheme = () => {
   const { theme, toggleTheme } = useThemes()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  
+
 
   return (
     <button
@@ -13,24 +23,30 @@ const ButtonTheme = () => {
       }
       onClick={toggleTheme}
     >
-      <div
-        className={
-          'absolute transition-transform duration-300' +
-          ' ' +
-          (theme === 'dark' ? 'translate-y-0' : '-translate-y-6')
-        }
-      >
-        <BsMoon />
-      </div>
-      <div
-        className={
-          'absolute transition-transform duration-300 ' +
-          ' ' +
-          (theme === 'light' ? 'translate-y-0' : 'translate-y-6')
-        }
-      >
-        <BsSun />
-      </div>
+      {
+        mounted && (
+          <>
+            <div
+              className={
+                'absolute transition-transform duration-300' +
+                ' ' +
+                (theme === 'dark' ? 'translate-y-0' : '-translate-y-6')
+              }
+            >
+              <BsMoon />
+            </div>
+            <div
+              className={
+                'absolute transition-transform duration-300 ' +
+                ' ' +
+                (theme === 'light' ? 'translate-y-0' : 'translate-y-6')
+              }
+            >
+              <BsSun />
+            </div>
+          </>
+        )
+      }
     </button>
   )
 }
