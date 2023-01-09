@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { BsSun, BsMoon } from 'react-icons/bs'
+import Sun from '../icons/Sun'
+import Moon from '../icons/Moon'
 
 
 import { useThemes } from '../../hooks/useThemes'
@@ -12,14 +13,11 @@ const ButtonTheme = () => {
     setMounted(true)
   }, [])
 
-  
-
-
   return (
     <button
       aria-label="Toggle theme"
       className={
-        'relative flex items-center justify-center overflow-hidden rounded border bg-slate-50 p-3 text-xs text-slate-800 dark:border-slate-500 dark:bg-slate-900 dark:text-slate-200'
+        'relative flex items-center justify-center overflow-hidden rounded border bg-slate-50 p-3 text-xs dark:border-slate-500 dark:bg-slate-900'
       }
       onClick={toggleTheme}
     >
@@ -33,7 +31,7 @@ const ButtonTheme = () => {
                 (theme === 'dark' ? 'translate-y-0' : '-translate-y-6')
               }
             >
-              <BsMoon />
+              <Moon className={'fill-slate-200'} />
             </div>
             <div
               className={
@@ -42,7 +40,7 @@ const ButtonTheme = () => {
                 (theme === 'light' ? 'translate-y-0' : 'translate-y-6')
               }
             >
-              <BsSun />
+              <Sun className={'fill-slate-800'} />
             </div>
           </>
         )
