@@ -26,12 +26,22 @@ export default async function handler(req) {
 
     return new ImageResponse(
       (
-        <div tw="h-full w-full flex items-start justify-start border border-slate-700 border-[12px] bg-gray-50">
-          <div tw="flex items-start justify-start h-full">
-            <div tw="flex flex-col justify-between w-full h-full">
-              <h1 tw="text-[80px] p-20 font-black text-left">{title}</h1>
-              <div tw="text-2xl pb-10 px-20 mb-0">{website}</div>
+        <div tw="h-full w-full flex items-start bg-slate-50 flex-col justify-between px-18 py-12">
+          <div tw="flex flex-col">
+            <div tw="flex items-center justify-center h-20 w-20">
+              <img
+                src={'https://vlnck.vercel.app/images/icon-me.png'}
+                tw="h-full w-full rounded-full"
+              />
             </div>
+
+            <h1 tw="text-[80px] p-20 font-black text-left text-slate-900 m-0 p-0 mt-5">
+              {title}
+            </h1>
+          </div>
+
+          <div tw="text-2xl pb-10 px-20 mb-0 text-slate-900 m-0 p-0">
+            {website}
           </div>
         </div>
       ),

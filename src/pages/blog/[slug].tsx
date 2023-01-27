@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { readingTime } from 'reading-time-estimator'
 
 import { getFileWithMetadata, getFileBySlug } from 'src/lib/mdReader'
-import { formatDate } from 'src/utils'
+import { useFormatedDate } from 'src/hooks/useFormatedDate'
 import FrontMatter from 'src/types/post'
 
 import ParserMd from 'src/components/markdowns/ParserMd'
@@ -16,7 +16,7 @@ interface Props {
 }
 
 const Post = ({ frontmatter, content }: Props) => {
-  const formatedDate = formatDate(frontmatter.date)
+  const { formatedDate } = useFormatedDate(frontmatter.date)
 
   const readingTimeEstimate = readingTime(content)
 

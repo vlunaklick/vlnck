@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { formatDate } from '../../../utils'
+import { useFormatedDate } from 'src/hooks/useFormatedDate'
 
 interface Props {
   slug: string
@@ -11,7 +11,7 @@ interface Props {
 }
 
 const CardBlog = ({ slug, title, date, description, tags }: Props) => {
-  const formatedDate = formatDate(date)
+  const { formatedDate } = useFormatedDate(date)
 
   return (
     <article>
@@ -21,9 +21,12 @@ const CardBlog = ({ slug, title, date, description, tags }: Props) => {
             {title}
           </h3>
 
-          <p className="text-xs text-slate-500 first-letter:capitalize dark:text-slate-400">
+          <time
+            title={formatedDate}
+            className="text-xs text-slate-500 first-letter:capitalize dark:text-slate-400"
+          >
             {formatedDate}
-          </p>
+          </time>
 
           <p className="text-sm leading-loose text-slate-600 line-clamp-5 first-letter:capitalize dark:text-slate-300 sm:line-clamp-3">
             {description}
