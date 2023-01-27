@@ -5,6 +5,7 @@ description: As 2022 comes to a close, join me in reflecting on the year's perso
 tags:
   - New Years
 published: true
+og_image: title=My 2023 Goals&subtitle=A Good Year&autor=vlnck
 ---
 
 2022 is ending 🍻! It's been a great year for me, filled with personal and professional growth. I got a job where I've been able to improve my skills, Argentina 🇦🇷 won the World Cup 🎉, and my grades in college are high. My personal life is going great, and I feel very fortunate. I hope that this year has also been positive for all of you.

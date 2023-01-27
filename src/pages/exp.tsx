@@ -14,6 +14,17 @@ const Exp: NextPage = () => {
     <BodyLayout>
       <Head>
         <title>{'Valentín Lunaklick — Experience'}</title>
+        <meta name="description" content="Valentín Lunaklick's experience" />
+        <meta property="og:title" content={'Valentín Lunaklick — Experience'} />
+        <meta
+          property="og:description"
+          content={"Valentín Lunaklick's experience"}
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:image"
+          content={`https://vlnck.tech/api/og?title=Valentín Lunaklick — Experience`}
+        />
       </Head>
       <MainLayout>
         <Title>Experience</Title>

@@ -28,6 +28,14 @@ const HeadLayout = ({ children }: Props) => {
         <meta name="apple-mobile-web-app-title" content="Valentín Lunaklick" />
         <meta name="manifest" content="/seo/manifest.json" />
         <meta name="theme-color" content="#50C878" />
+        <meta name="description" content="Valentín Lunaklick's web" />
+        <meta property="og:title" content={'Valentín Lunaklick — web'} />
+        <meta property="og:description" content={"Valentín Lunaklick's web"} />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:image"
+          content={`https://vlnck.tech/api/og?title=Valentín Lunaklick — web`}
+        />
       </Head>
 
       {children}

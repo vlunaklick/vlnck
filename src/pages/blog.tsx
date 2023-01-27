@@ -24,6 +24,20 @@ const Blog: NextPage<Props> = ({ posts }) => {
     <BodyLayout>
       <Head>
         <title>{'Valentín Lunaklick — Blog'}</title>
+        <meta
+          name="description"
+          content="Here I'll post blogs of what I'm learning"
+        />
+        <meta property="og:title" content={'Valentín Lunaklick — Blog'} />
+        <meta
+          property="og:description"
+          content={"Here I'll post blogs of what I'm learning"}
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:image"
+          content={`https://vlnck.tech/api/og?title=Valentín Lunaklick — Blog`}
+        />
       </Head>
       <MainLayout>
         <Title>Blog</Title>
