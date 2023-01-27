@@ -12,21 +12,22 @@ const Nav = () => {
     <div className="mx-auto flex w-full max-w-2xl items-center justify-between p-4">
       <Link href={'/'}>
         <a className="flex items-center gap-2 transition-transform hover:scale-105">
-          <picture className='flex items-center justify-center'>
+          <picture className="flex items-center justify-center">
             <Image
               src={'/images' + '/icon-me.png'}
               alt="My emoji"
               className="cursor-pointer rounded-full"
               width={40}
               height={40}
-              
             />
           </picture>
+
           <h1 className={'hidden text-xl font-bold sm:block sm:text-3xl'}>
             Vlnck
           </h1>
         </a>
       </Link>
+
       <nav className="flex items-center justify-around gap-3">
         {linksNav.map(link => (
           <NavLinks key={link.name} {...link} asPath={asPath} />

@@ -17,6 +17,7 @@ const ArticleExp = ({ start, end, title, place, url, description }: Props) => {
           ? start + ' — ' + end
           : start.toString()}
       </p>
+
       <div>
         <p className="m-0 text-sm font-medium leading-loose text-black dark:text-white sm:text-base">
           {title} at{' '}
@@ -29,6 +30,7 @@ const ArticleExp = ({ start, end, title, place, url, description }: Props) => {
             </a>
           </Link>
         </p>
+
         <p className="text-sm leading-loose text-slate-600 first-letter:capitalize dark:text-slate-300">
           {description}
         </p>

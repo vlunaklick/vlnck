@@ -4,7 +4,6 @@ export default interface FrontMatter {
   description: string
   tags: string[]
   published: boolean
-  og_image: string
 }
 
 export default interface Post {

@@ -42,6 +42,7 @@ const ArticleProject = ({
         <p className="text-sm leading-loose text-slate-600 first-letter:capitalize dark:text-slate-300">
           {description}
         </p>
+
         <div className="flex gap-2 text-sm text-blue-500 first-letter:capitalize">
           <Link href={url} passHref>
             <a
@@ -53,7 +54,9 @@ const ArticleProject = ({
               Live view
             </a>
           </Link>
+
           <p>•</p>
+
           <Link href={github} passHref>
             <a
               target="_blank"

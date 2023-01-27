@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { formatDate } from '../../../utils/formatDate'
+import { formatDate } from '../../../utils'
 
 interface Props {
   slug: string
@@ -20,14 +20,17 @@ const CardBlog = ({ slug, title, date, description, tags }: Props) => {
           <h3 className="text-lg font-medium text-slate-700 first-letter:capitalize dark:text-slate-100">
             {title}
           </h3>
+
           <p className="text-xs text-slate-500 first-letter:capitalize dark:text-slate-400">
             {formatedDate}
           </p>
+
           <p className="text-sm leading-loose text-slate-600 line-clamp-5 first-letter:capitalize dark:text-slate-300 sm:line-clamp-3">
             {description}
           </p>
         </a>
       </Link>
+
       <Link href={'/blog/' + slug}>
         <a className="pointer-events-auto text-sm text-blue-500 transition-colors hover:text-blue-400 sm:pointer-events-none sm:hidden">
           Read more →

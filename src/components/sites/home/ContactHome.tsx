@@ -12,12 +12,14 @@ const ContactHome = () => {
         content="Valentín Lunaklick"
         aria="Link to my LinkedIn profile"
       />
+
       <LinkContactHome
         name="Github"
         url="https://github.com/vlunaklick"
         content="vlunaklick"
         aria="Link to my Github profile"
       />
+
       <LinkContactHome
         name="Resume"
         url="valentin-lunaklick-resume.pdf"

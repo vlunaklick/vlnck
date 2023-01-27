@@ -1,14 +1,13 @@
 import Link from 'next/link'
 import { readingTime } from 'reading-time-estimator'
-import Head from 'next/head'
 
 import { getFileWithMetadata, getFileBySlug } from '../../lib/mdReader'
-import { formatDate } from '../../utils/formatDate'
+import { formatDate } from '../../utils'
 import FrontMatter from '../../types/post'
 
 import ParserMd from '../../components/markdowns/ParserMd'
-import MainLayout from '../../components/layouts/MainLayout'
-import BodyLayout from '../../components/layouts/BodyLayout'
+import PageLayout from '../../components/layouts/PageLayout'
+import Seo from '../../components/app/Seo'
 
 interface Props {
   frontmatter: FrontMatter
@@ -23,37 +22,34 @@ const Post = ({ frontmatter, content }: Props) => {
 
   return (
     <>
-      <BodyLayout>
-        <Head>
-          <title>{frontmatter.title}</title>
-          <meta name="description" content={frontmatter.description} />
-          <meta property="og:title" content={frontmatter.title} />
-          <meta property="og:description" content={frontmatter.description} />
-          <meta property="og:type" content="article" />
-          <meta
-            property="og:image"
-            content={`https://vlnck.tech/api/og?title=${frontmatter.title}`}
-          />
-        </Head>
-        <MainLayout>
-          <Link href="/blog">
-            <a className="w-max text-xs text-slate-400 dark:text-slate-500">
-              ← Back to blog
-            </a>
-          </Link>
-          <article>
-            <header className="mb-4">
-              <h1 className="text-4xl font-semibold">{frontmatter.title}</h1>
-              <div className="mt-2 flex gap-1 text-xs text-slate-500 dark:text-slate-400">
-                <p>{formatedDate}</p>
-                <p>•</p>
-                <p>{readingTimeEstimate.text}</p>
-              </div>
-            </header>
-            <ParserMd>{content}</ParserMd>
-          </article>
-        </MainLayout>
-      </BodyLayout>
+      <PageLayout>
+        <Seo
+          title={frontmatter.title}
+          description={frontmatter.description}
+          og_title={frontmatter.title}
+          og_description={frontmatter.description}
+          og_type="website"
+        />
+
+        <Link href="/blog">
+          <a className="w-max text-xs text-slate-400 dark:text-slate-500">
+            ← Back to blog
+          </a>
+        </Link>
+
+        <article>
+          <header className="mb-4">
+            <h1 className="text-4xl font-semibold">{frontmatter.title}</h1>
+            <div className="mt-2 flex gap-1 text-xs text-slate-500 dark:text-slate-400">
+              <time title={formatedDate}>{formatedDate}</time>
+              <p>•</p>
+              <p>{readingTimeEstimate.text}</p>
+            </div>
+          </header>
+
+          <ParserMd>{content}</ParserMd>
+        </article>
+      </PageLayout>
     </>
   )
 }

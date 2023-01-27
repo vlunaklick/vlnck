@@ -1,14 +1,19 @@
 import Link from 'next/link'
 
 import type { NextPage } from 'next'
+import { SEO_ERROR } from '../../content/seo'
 
-import BodyLayout from '../components/layouts/BodyLayout'
+import PageLayout from '../components/layouts/PageLayout'
+import Seo from '../components/app/Seo'
 
 const Custom404: NextPage = () => {
   return (
-    <BodyLayout>
+    <PageLayout>
+      <Seo {...SEO_ERROR} />
+
       <div className="mx-auto flex flex-col items-center text-center font-bold">
         <p className="text-2xl">Page not found</p>
+
         <Link href="/">
           <a className="group max-w-min text-sm font-medium text-slate-400">
             Home
@@ -16,7 +21,7 @@ const Custom404: NextPage = () => {
           </a>
         </Link>
       </div>
-    </BodyLayout>
+    </PageLayout>
   )
 }
 
