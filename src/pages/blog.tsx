@@ -1,16 +1,14 @@
-import Head from 'next/head'
-
 import type { NextPage } from 'next'
 
-import Post from '../types/post'
 import { SEO_BLOG } from '../../content/seo'
-import { sortByDate } from '../utils'
-import { getPosts } from '../lib/mdReader'
+import Post from 'src/types/post'
+import { sortByDate } from 'src/utils'
+import { getPosts } from 'src/lib/mdReader'
 
-import PageLayout from '../components/layouts/PageLayout'
-import CardBlog from '../components/sites/blog/CardBlog'
-import Title from '../components/app/Title'
-import Seo from '../components/app/Seo'
+import PageLayout from 'src/components/layouts/PageLayout'
+import CardBlog from 'src/components/sites/blog/CardBlog'
+import Title from 'src/components/app/Title'
+import Seo from 'src/components/app/Seo'
 
 interface Props {
   posts: Post[]

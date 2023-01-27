@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import { readingTime } from 'reading-time-estimator'
 
-import { getFileWithMetadata, getFileBySlug } from '../../lib/mdReader'
-import { formatDate } from '../../utils'
-import FrontMatter from '../../types/post'
+import { getFileWithMetadata, getFileBySlug } from 'src/lib/mdReader'
+import { formatDate } from 'src/utils'
+import FrontMatter from 'src/types/post'
 
-import ParserMd from '../../components/markdowns/ParserMd'
-import PageLayout from '../../components/layouts/PageLayout'
-import Seo from '../../components/app/Seo'
+import ParserMd from 'src/components/markdowns/ParserMd'
+import PageLayout from 'src/components/layouts/PageLayout'
+import Seo from 'src/components/app/Seo'
 
 interface Props {
   frontmatter: FrontMatter
