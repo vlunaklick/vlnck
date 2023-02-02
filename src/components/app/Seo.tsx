@@ -29,7 +29,7 @@ export default function Seo({
 
       <meta
         property="og:image"
-        content={`https://vlnck.tech/api/og?title=${title}`}
+        content={`https://vlnck.vercel.app/api/og?title=${title}`}
       />
     </Head>
   )

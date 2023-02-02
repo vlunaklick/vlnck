@@ -22,7 +22,12 @@ export default async function handler(req) {
     const title = searchParams.has('title')
       ? searchParams.get('title')?.slice(0, 100)
       : 'My default title'
-    const website = searchParams.get('website') || 'vlnck.tech'
+
+    const subtitle = searchParams.has('subtitle')
+      ? searchParams.get('subtitle')?.slice(0, 100)
+      : ''
+
+    const website = searchParams.get('website') || 'vlnck'
 
     return new ImageResponse(
       (
@@ -38,6 +43,11 @@ export default async function handler(req) {
             <h1 tw="text-[80px] p-20 font-black text-left text-slate-900 m-0 p-0 mt-5">
               {title}
             </h1>
+            {subtitle && (
+              <h2 tw="text-[40px] p-20 font-black text-left text-slate-900 m-0 p-0 mt-5">
+                {subtitle}
+              </h2>
+            )}
           </div>
 
           <div tw="text-2xl pb-10 px-20 mb-0 text-slate-900 m-0 p-0">

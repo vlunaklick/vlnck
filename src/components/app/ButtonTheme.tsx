@@ -1,8 +1,8 @@
 import { useMounted } from 'src/hooks/useMounted'
 import { useThemes } from 'src/hooks/useThemes'
 
-import Sun from '../icons/Sun'
-import Moon from '../icons/Moon'
+import Sun from 'src/components/icons/Sun'
+import Moon from 'src/components/icons/Moon'
 
 const ButtonTheme = () => {
   const { theme, toggleTheme } = useThemes()

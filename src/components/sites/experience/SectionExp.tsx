@@ -1,4 +1,4 @@
-import Experience from '../../../types/experience'
+import Experience from 'src/types/experience'
 
 import ArticleExp from './ArticleExp'
 

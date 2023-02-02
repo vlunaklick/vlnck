@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { formatDate } from '../utils'
+import { formatDate } from 'src/utils'
 
 export const useFormatedDate = date => {
   const [formatedDate, setFormatedDate] = useState()
