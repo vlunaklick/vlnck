@@ -21,13 +21,12 @@ const ArticleExp = ({ start, end, title, place, url, description }: Props) => {
       <div>
         <p className="m-0 text-sm font-medium leading-loose text-black dark:text-white sm:text-base">
           {title} at{' '}
-          <Link href={url} passHref>
-            <a
-              target="_blank"
-              className="underline transition-colors hover:text-blue-500"
-            >
-              {place}
-            </a>
+          <Link
+            href={url}
+            target="_blank"
+            className="underline transition-colors hover:text-blue-500"
+          >
+            {place}
           </Link>
         </p>
 

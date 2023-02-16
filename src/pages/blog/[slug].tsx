@@ -31,10 +31,11 @@ const Post = ({ frontmatter, content }: Props) => {
           og_type="website"
         />
 
-        <Link href="/blog">
-          <a className="w-max text-xs text-slate-400 dark:text-slate-500">
-            ← Back to blog
-          </a>
+        <Link
+          href="/blog"
+          className="w-max text-xs text-slate-400 dark:text-slate-500"
+        >
+          ← Back to blog
         </Link>
 
         <article>

@@ -44,28 +44,26 @@ const ArticleProject = ({
         </p>
 
         <div className="flex gap-2 text-sm text-blue-500 first-letter:capitalize">
-          <Link href={url} passHref>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Live view"
-              className="hover:text-blue-400"
-            >
-              Live view
-            </a>
+          <Link
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Live view"
+            className="hover:text-blue-400"
+          >
+            Live view
           </Link>
 
           <p>•</p>
 
-          <Link href={github} passHref>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Github"
-              className="hover:text-blue-400"
-            >
-              Github
-            </a>
+          <Link
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Github"
+            className="hover:text-blue-400"
+          >
+            Github
           </Link>
         </div>
       </div>

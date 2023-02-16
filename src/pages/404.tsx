@@ -14,11 +14,12 @@ const Custom404: NextPage = () => {
       <div className="mx-auto flex flex-col items-center text-center font-bold">
         <p className="text-2xl">Page not found</p>
 
-        <Link href="/">
-          <a className="group max-w-min text-sm font-medium text-slate-400">
-            Home
-            <span className="block h-[2px] max-w-0 bg-slate-200 transition-all duration-500 group-hover:max-w-full" />
-          </a>
+        <Link
+          href="/"
+          className="group max-w-min text-sm font-medium text-slate-400"
+        >
+          Home
+          <span className="block h-[2px] max-w-0 bg-slate-200 transition-all duration-500 group-hover:max-w-full" />
         </Link>
       </div>
     </PageLayout>
