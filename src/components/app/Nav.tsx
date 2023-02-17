@@ -1,41 +1,22 @@
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 import NavLinks from './NavLinks'
 import ButtonTheme from './ButtonTheme'
-import Image from 'next/image'
 
 const Nav = () => {
   const { asPath } = useRouter()
 
   return (
-    <div className="mx-auto flex w-full max-w-2xl items-center justify-between p-4">
-      <Link
-        href={'/'}
-        className="flex items-center gap-2 transition-transform hover:scale-105"
-      >
-        <picture className="flex items-center justify-center">
-          <Image
-            src={'/images' + '/icon-me.png'}
-            alt="My emoji"
-            className="cursor-pointer rounded-full"
-            width={40}
-            height={40}
-          />
-        </picture>
-
-        <h1 className={'hidden text-xl font-bold sm:block sm:text-3xl'}>
-          Vlnck
-        </h1>
-      </Link>
-
-      <nav className="flex items-center justify-around gap-3">
-        {linksNav.map(link => (
-          <NavLinks key={link.name} {...link} asPath={asPath} />
-        ))}
+    <>
+      <nav className="fixed top-0 left-0 hidden h-screen w-full flex-col items-center justify-center gap-3 bg-black/70 p-6 peer-checked:flex sm:static sm:flex sm:h-fit sm:w-min sm:flex-row sm:items-start sm:justify-around sm:gap-3 sm:bg-inherit sm:p-0">
+        <ul className="flex flex-col gap-3 sm:flex-row">
+          {linksNav.map(link => (
+            <NavLinks key={link.name} {...link} asPath={asPath} />
+          ))}
+        </ul>
         <ButtonTheme />
       </nav>
-    </div>
+    </>
   )
 }
 
