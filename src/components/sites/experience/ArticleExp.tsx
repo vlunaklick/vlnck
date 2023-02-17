@@ -30,7 +30,7 @@ const ArticleExp = ({ start, end, title, place, url, description }: Props) => {
           </Link>
         </p>
 
-        <p className="text-sm leading-loose text-slate-600 first-letter:capitalize dark:text-slate-300">
+        <p className="text-sm leading-loose text-slate-600 first-letter:capitalize dark:text-slate-300 sm:text-[15px]">
           {description}
         </p>
       </div>

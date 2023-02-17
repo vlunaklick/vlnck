@@ -25,7 +25,7 @@ const CardBlog = ({ slug, title, date, description, tags }: Props) => {
 
         <time
           title={formatedDate}
-          className="text-xs text-slate-500 first-letter:capitalize dark:text-slate-400"
+          className="text-xs text-slate-500 first-letter:capitalize dark:text-slate-400 sm:text-[15px]"
         >
           {formatedDate}
         </time>
