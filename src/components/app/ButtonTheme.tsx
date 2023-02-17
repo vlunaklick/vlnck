@@ -8,10 +8,23 @@ const ButtonTheme = () => {
   const { theme, toggleTheme } = useThemes()
   const { mounted } = useMounted()
 
+  if (!mounted) {
+    return (
+      <button
+        className={
+          'relative flex items-center justify-center overflow-hidden rounded border bg-slate-50 p-3 text-xs dark:border-slate-500 dark:bg-slate-900'
+        }
+      ></button>
+    )
+  }
+
+  const textLabel = `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`
+  const themeIsDark = theme === 'dark'
+
   return (
     <button
-      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-      title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      aria-label={textLabel}
+      title={textLabel}
       className={
         'relative flex items-center justify-center overflow-hidden rounded border bg-slate-50 p-3 text-xs dark:border-slate-500 dark:bg-slate-900'
       }
@@ -22,7 +35,7 @@ const ButtonTheme = () => {
           <div
             className={
               'absolute translate-y-0 transition-transform duration-300 ' +
-              (theme === 'light' && '-translate-y-6')
+              (!themeIsDark && '-translate-y-6')
             }
           >
             <Moon className={'fill-slate-200'} />
@@ -30,7 +43,7 @@ const ButtonTheme = () => {
           <div
             className={
               'absolute translate-y-0 transition-transform duration-300 ' +
-              (theme === 'dark' && 'translate-y-6')
+              (themeIsDark && 'translate-y-6')
             }
           >
             <Sun className={'fill-slate-800'} />
