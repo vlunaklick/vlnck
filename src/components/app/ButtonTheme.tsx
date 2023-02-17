@@ -5,7 +5,7 @@ import Sun from 'src/components/icons/Sun'
 import Moon from 'src/components/icons/Moon'
 
 const ButtonTheme = () => {
-  const { theme, toggleTheme } = useThemes()
+  const { theme, systemTheme, toggleTheme } = useThemes()
   const { mounted } = useMounted()
 
   if (!mounted) {
@@ -18,8 +18,10 @@ const ButtonTheme = () => {
     )
   }
 
-  const textLabel = `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`
-  const themeIsDark = theme === 'dark'
+  const themeToUse = theme === 'system' ? systemTheme : theme
+
+  const textLabel = `Switch to ${themeToUse === 'dark' ? 'light' : 'dark'} mode`
+  const themeIsDark = themeToUse === 'dark'
 
   return (
     <button
