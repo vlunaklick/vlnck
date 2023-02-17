@@ -10,7 +10,8 @@ const ButtonTheme = () => {
 
   return (
     <button
-      aria-label="Toggle theme"
+      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
       className={
         'relative flex items-center justify-center overflow-hidden rounded border bg-slate-50 p-3 text-xs dark:border-slate-500 dark:bg-slate-900'
       }
@@ -20,18 +21,16 @@ const ButtonTheme = () => {
         <>
           <div
             className={
-              'absolute transition-transform duration-300' +
-              ' ' +
-              (theme === 'dark' ? 'translate-y-0' : '-translate-y-6')
+              'absolute translate-y-0 transition-transform duration-300 ' +
+              (theme === 'light' && '-translate-y-6')
             }
           >
             <Moon className={'fill-slate-200'} />
           </div>
           <div
             className={
-              'absolute transition-transform duration-300 ' +
-              ' ' +
-              (theme === 'light' ? 'translate-y-0' : 'translate-y-6')
+              'absolute translate-y-0 transition-transform duration-300 ' +
+              (theme === 'dark' && 'translate-y-6')
             }
           >
             <Sun className={'fill-slate-800'} />
