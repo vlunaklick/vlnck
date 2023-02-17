@@ -17,7 +17,7 @@ const SectionProject = () => {
     )
   })
 
-  return <>{worksCard}</>
+  return <section className="flex flex-col gap-8">{worksCard}</section>
 }
 
 export default SectionProject

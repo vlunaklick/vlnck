@@ -19,7 +19,7 @@ const ArticleProject = ({
   image,
 }: Props) => {
   return (
-    <article className="mt-5 flex flex-col justify-center gap-4 rounded transition-all sm:mt-0 sm:flex-row sm:p-4 sm:hover:-translate-y-1 sm:hover:bg-slate-100 sm:hover:shadow-sm sm:dark:hover:bg-slate-800">
+    <article className="mt-5 flex flex-col justify-center gap-4 rounded transition-all sm:mt-0 sm:flex-row">
       {/* <a
         href={url}
         target="_blank"
@@ -35,15 +35,15 @@ const ArticleProject = ({
         </picture>
       </a> */}
       <div className="flex flex-col justify-between gap-1">
-        <h3 className="text-lg font-medium text-slate-800 first-letter:capitalize dark:text-slate-100">
+        <h3 className="text-lg font-semibold text-slate-900 transition-colors dark:text-slate-50">
           {title}
         </h3>
 
-        <p className="text-sm leading-loose text-slate-600 first-letter:capitalize dark:text-slate-300 sm:text-[15px]">
+        <p className="text-sm leading-loose text-slate-600 dark:text-slate-300 sm:text-[15px]">
           {description}
         </p>
 
-        <div className="flex gap-2 text-sm text-blue-500 first-letter:capitalize">
+        <div className="flex gap-2 text-sm text-blue-500">
           <Link
             href={url}
             target="_blank"
