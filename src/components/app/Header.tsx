@@ -11,6 +11,7 @@ const Header = () => {
   const checkboxId = useId()
 
   useEffect(() => {
+    hideOverFlow(false)
     const checkbox = document.getElementById(checkboxId) as HTMLInputElement
     const mediaQuery = window.matchMedia('(min-width: 640px)')
 
@@ -64,9 +65,7 @@ const Header = () => {
           />
         </picture>
 
-        <h1 className={'hidden text-xl font-bold sm:block sm:text-3xl'}>
-          Vlnck
-        </h1>
+        <h1 className={'text-xl font-bold sm:block sm:text-3xl'}>Vlnck</h1>
       </Link>
 
       <input
