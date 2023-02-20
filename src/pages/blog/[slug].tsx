@@ -8,6 +8,7 @@ import FrontMatter from 'src/types/post'
 import ParserMd from 'src/components/markdowns/ParserMd'
 import PageLayout from 'src/components/layouts/PageLayout'
 import Seo from 'src/components/app/Seo'
+import ButtonTop from '@/src/components/app/ButtonTop'
 
 interface Props {
   frontmatter: FrontMatter
@@ -38,7 +39,7 @@ const Post = ({ frontmatter, content }: Props) => {
           ← Back to blog
         </Link>
 
-        <article>
+        <article className="relative">
           <header className="mb-4">
             <h1 className="text-4xl font-semibold">{frontmatter.title}</h1>
             <div className="mt-2 flex gap-1 text-xs text-slate-500 dark:text-slate-400">
@@ -49,6 +50,7 @@ const Post = ({ frontmatter, content }: Props) => {
           </header>
 
           <ParserMd>{content}</ParserMd>
+          <ButtonTop />
         </article>
       </PageLayout>
     </>

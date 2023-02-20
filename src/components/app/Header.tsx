@@ -77,7 +77,7 @@ const Header = () => {
       />
       <label
         htmlFor={checkboxId}
-        className="z-10 w-9 cursor-pointer fill-slate-900 dark:fill-white sm:hidden peer-checked:[&>.open]:hidden peer-checked:[&>.close]:block"
+        className="z-30 w-9 cursor-pointer fill-slate-900 dark:fill-white sm:hidden peer-checked:[&>.open]:hidden peer-checked:[&>.close]:block"
       >
         <Menu className="open" />
         <Cross className="close hidden stroke-white stroke-2" />

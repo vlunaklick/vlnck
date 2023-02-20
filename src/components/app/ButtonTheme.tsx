@@ -40,7 +40,7 @@ const ButtonTheme = () => {
               (!themeIsDark && '-translate-y-6')
             }
           >
-            <Moon className={'fill-slate-200'} />
+            <Moon className={'mx-auto h-2/4 w-2/4 fill-slate-200'} />
           </div>
           <div
             className={
@@ -48,7 +48,7 @@ const ButtonTheme = () => {
               (themeIsDark && 'translate-y-6')
             }
           >
-            <Sun className={'fill-slate-800'} />
+            <Sun className={'mx-auto h-2/4 w-2/4 fill-slate-800'} />
           </div>
         </>
       )}

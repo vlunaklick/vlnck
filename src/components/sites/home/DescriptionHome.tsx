@@ -18,7 +18,7 @@ const DescriptionHome = () => {
       </p>
 
       <p className="mt-3">
-        For backend development, have experience using Node.js for backend
+        For backend development, I have experience using Node.js for backend
         development and have worked with frameworks such as Express and Prisma.
         I am also skilled in working with various databases, including
         PostgreSQL, MongoDB, and Firebase.
