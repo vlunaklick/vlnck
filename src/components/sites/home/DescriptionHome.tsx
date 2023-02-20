@@ -2,7 +2,7 @@ const DescriptionHome = () => {
   return (
     <section className="flex w-full max-w-none flex-col text-sm leading-6 text-black dark:text-white sm:text-base">
       <p>
-        I am Valentín, a Fullstack developer oriented in Frontend from Buenos
+        I am Valentín, a Full Stack Developer oriented in Frontend from Buenos
         Aires, Argentina.
       </p>
 
@@ -18,13 +18,15 @@ const DescriptionHome = () => {
       </p>
 
       <p className="mt-3">
-        Moreover, in frontend I can use frameworks as styled-components and I
-        can design with Figma and Photoshop.
+        For backend development, have experience using Node.js for backend
+        development and have worked with frameworks such as Express and Prisma.
+        I am also skilled in working with various databases, including
+        PostgreSQL, MongoDB, and Firebase.
       </p>
 
       <p className="mt-3">
-        In the backend side, I can also work in Java with SpringBoot, Golang and
-        with MongoDB or Firebase.
+        Moreover, in frontend I can use frameworks as styled-components and I
+        can design with Figma and Photoshop.
       </p>
     </section>
   )

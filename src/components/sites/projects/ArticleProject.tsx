@@ -39,7 +39,7 @@ const ArticleProject = ({
           {title}
         </h3>
 
-        <p className="text-sm leading-loose text-slate-600 dark:text-slate-300 sm:text-[15px]">
+        <p className="text-sm leading-loose text-slate-600 dark:text-slate-400">
           {description}
         </p>
 

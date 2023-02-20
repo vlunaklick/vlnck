@@ -6,7 +6,7 @@ export const EXPERIENCE = [
     place: 'CryptoMate',
     URL: 'https://cryptomate.me/',
     description:
-      'I have been responsible for developing and maintaining APIs using Node.js, creating Java services using the Spring Boot library, and maintaining and updating the company website. My work has included implementing new features for the APIs, adding new sections and features to the website to make it modern, fast, and user-friendly, and working to improve the overall user experience.',
+      'As a backend developer, I designed, developed, and maintained APIs using Node.js and PostgreSQL. This work involved developing efficient services and databases for effective data management and retrieval. I later transitioned to a Full Stack role, adding frontend development with React and Next.js to improve website performance, user experience, and customer satisfaction.',
   },
 ]
 
@@ -18,7 +18,7 @@ export const EDUCATION = [
     place: 'Universidad del Salvador',
     URL: 'http://www.usal.edu.ar/institucional',
     description:
-      'Currently, I am taking part of subjects like "Data structure and Algorithms", "Programming II", "Information systems" and I have programmed in languages such as Python, C and Golang.',
+      'I have completed relevant coursework in Data Structures and Algorithms, Information Systems, and Programming II. Currently, I am enrolled in Database Systems and Advanced Programming. Through working on different projects and assignments, I have gained proficiency in programming languages like Go, Java, and Python.',
   },
   {
     start: 2021,

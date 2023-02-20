@@ -2,28 +2,28 @@ export const WORKS = [
   {
     title: 'Live in chat',
     content:
-      'I developed a real-time chat application using Next.js and Express in the frontend and backend, respectively. In addition, I set up a separate server to host the socket.io server, which enables the client and server to communicate in real-time. The chat allows users to send and receive messages in real-time, providing a seamless and interactive communication experience.',
+      'The real-time chat application utilizes Next.js and Express for the frontend and backend, respectively. Additionally, a separate server was established to host the socket.io server, enabling real-time communication between the client and server. Users can seamlessly send and receive messages, providing an interactive communication experience.',
     src: 'project-liveinchat.png',
     techs: ['Next.js', 'socket.io', 'Express', 'PostgreSQL'],
     liveview: 'https://live-in-chat.vercel.app/',
     code: 'https://github.com/vlunaklick/live_in_chat',
   },
   {
+    title: 'Littera',
+    content:
+      'A social media platform was developed using Next.js, TailwindCSS, and Firebase. The platform offers various features such as content creation and sharing, user following, and profile viewing. The interface is fast, visually appealing, and user-friendly.',
+    src: '',
+    techs: ['Next.js', 'Firebase', 'Tailwind CSS'],
+    liveview: 'https://littera-web.vercel.app/',
+    code: 'https://github.com/vlunaklick/twitter-clone',
+  },
+  {
     title: 'Moofy',
     content:
-      'This is an e-commerce plataform for a fictional company called Moofy. The main goal of this project is to improve my UI/UX skills and to keep on with TypeScript. Also, I wanted to apply framer motion so I could learn more about animations.',
+      'An e-commerce platform developed for a fictional company named Moofy. The primary objective of this project was to enhance the UI/UX skills and to work on TypeScript. In addition, framer motion was incorporated to learn more about animations. The platform offers an engaging and visually appealing interface, providing a smooth and seamless shopping experience to the customers.',
     src: 'project-moofy.png',
     techs: ['React', 'framer-motion', 'Tailwind CSS'],
     liveview: 'https://moofy-commerce.vercel.app/',
     code: 'https://github.com/vlunaklick/moofy-commerce',
-  },
-  {
-    title: 'Emoji Catcher & Picker',
-    content:
-      "In this project, I have re-implemented a CDN for emojis originally created by Ben Borgers using JavaScript and Node.js. The CDN is powered by Express and 'express-expenditious', which allows for efficient delivery of emoji files. In addition, I have developed an emoji picker feature that allows users to easily search and select from a variety of different emoji styles. This emoji picker demonstrates the functionality of the CDN API and provides a user-friendly interface for selecting and inserting emojis into text.",
-    src: 'project-cdn.png',
-    techs: ['Node.js', 'Express', 'Next.js'],
-    liveview: 'https://emoji-picker-cdn.vercel.app/',
-    code: 'https://github.com/vlunaklick/cdn_emojis',
   },
 ]
