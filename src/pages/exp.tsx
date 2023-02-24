@@ -13,13 +13,17 @@ const Exp: NextPage = () => {
     <PageLayout>
       <Seo {...SEO_EXPERIENCE} />
 
-      <Title>Experience</Title>
+      <section>
+        <Title>Experience</Title>
 
-      <SectionExp info={EXPERIENCE} />
+        <SectionExp info={EXPERIENCE} />
+      </section>
 
-      <Title>Education</Title>
+      <section>
+        <Title>Education</Title>
 
-      <SectionExp info={EDUCATION} />
+        <SectionExp info={EDUCATION} />
+      </section>
     </PageLayout>
   )
 }
