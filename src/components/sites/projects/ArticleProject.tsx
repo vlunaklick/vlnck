@@ -19,54 +19,38 @@ const ArticleProject = ({
   image,
 }: Props) => {
   return (
-    <article className="mt-5 flex flex-col justify-center gap-4 rounded transition-all sm:mt-0 sm:flex-row">
-      {/* <a
-        href={url}
-        target="_blank"
-        className="sm:max-h-36 rounded aspect-video cursor-pointer w-full sm:min-w-max"
-        rel="noopener noreferrer"
-      >
-        <picture>
-          <img
-            src={'/images/projects/' + image}
-            alt={title}
-            className="w-full h-full"
-          />
-        </picture>
-      </a> */}
-      <div className="flex flex-col justify-between gap-1">
-        <h3 className="text-lg font-semibold text-slate-900 transition-colors dark:text-slate-50">
-          {title}
-        </h3>
+    <article className="mt-5 flex flex-col justify-center gap-1 rounded transition-all sm:mt-0">
+      <h3 className="text-lg font-semibold text-slate-900 transition-colors dark:text-slate-50">
+        {title}
+      </h3>
 
-        <p className="text-sm leading-loose text-slate-600 dark:text-slate-400">
-          {description}
-        </p>
+      <p className="text-sm leading-loose text-slate-600 dark:text-slate-400">
+        {description}
+      </p>
 
-        <div className="flex gap-2 text-sm text-blue-500">
-          <Link
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Live view"
-            className="hover:text-blue-400"
-          >
-            Live view
-          </Link>
+      <footer className="flex gap-2 text-sm text-blue-500">
+        <Link
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Live view"
+          className="hover:text-blue-400"
+        >
+          Live view
+        </Link>
 
-          <p>•</p>
+        <p>•</p>
 
-          <Link
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Github"
-            className="hover:text-blue-400"
-          >
-            Github
-          </Link>
-        </div>
-      </div>
+        <Link
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Github"
+          className="hover:text-blue-400"
+        >
+          Github
+        </Link>
+      </footer>
     </article>
   )
 }

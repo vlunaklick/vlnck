@@ -12,9 +12,11 @@ const Projects: NextPage = () => {
     <PageLayout>
       <Seo {...SEO_PROJECTS} />
 
-      <Title>Projects</Title>
+      <section>
+        <Title>Projects</Title>
 
-      <SectionProject />
+        <SectionProject />
+      </section>
     </PageLayout>
   )
 }

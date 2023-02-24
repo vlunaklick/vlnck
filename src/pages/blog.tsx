@@ -24,11 +24,13 @@ const Blog: NextPage<Props> = ({ posts }) => {
       <PageLayout>
         <Seo {...SEO_BLOG} />
 
-        <Title>Blog</Title>
+        <section>
+          <Title>Blog</Title>
 
-        {validPosts.map(post => (
-          <CardBlog key={post.slug} {...post.frontmatter} slug={post.slug} />
-        ))}
+          {validPosts.map(post => (
+            <CardBlog key={post.slug} {...post.frontmatter} slug={post.slug} />
+          ))}
+        </section>
       </PageLayout>
     </>
   )
