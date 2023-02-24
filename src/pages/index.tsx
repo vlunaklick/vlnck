@@ -13,9 +13,11 @@ const Home: NextPage = () => {
     <PageLayout>
       <Seo {...SEO_HOME} />
 
-      <Title>Welcome! 👋</Title>
+      <section>
+        <Title>Welcome! 👋</Title>
 
-      <DescriptionHome />
+        <DescriptionHome />
+      </section>
 
       <ContactHome />
     </PageLayout>

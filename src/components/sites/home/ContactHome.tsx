@@ -2,7 +2,7 @@ import LinkContactHome from './LinkContactHome'
 
 const ContactHome = () => {
   return (
-    <div className="flex flex-col gap-3">
+    <section className="flex flex-col gap-3">
       <p className="text-sm font-medium text-slate-800 dark:text-slate-50 sm:text-base">
         Contact
       </p>
@@ -22,12 +22,12 @@ const ContactHome = () => {
 
       <LinkContactHome
         name="Resume"
-        url="valentin-lunaklick-resume.pdf"
+        url="valentinlunaklick.pdf"
         download="valentin-lunaklick-resume"
         content="Click to download"
         aria="Link to download my resume"
       />
-    </div>
+    </section>
   )
 }
 

@@ -4,7 +4,7 @@ interface Props {
 
 const Title = ({ children }: Props) => {
   return (
-    <h2 className="mb-4 text-xl font-bold text-slate-900 transition-colors dark:text-slate-50">
+    <h2 className="mb-3 text-xl font-bold text-slate-800 transition-colors dark:text-slate-50">
       {children}
     </h2>
   )
