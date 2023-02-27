@@ -10,7 +10,7 @@ interface Props {
 
 const LinkContactHome = ({ name, url, content, download, aria }: Props) => {
   return (
-    <div className="flex gap-5 text-sm sm:text-[14px]">
+    <div className="flex gap-5 text-sm sm:text-[15px]">
       <p className="min-w-[8ch] text-slate-600 dark:text-slate-400">{name}</p>
       <Link
         href={url}

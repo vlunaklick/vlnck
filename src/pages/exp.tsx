@@ -19,7 +19,7 @@ const Exp: NextPage = () => {
         <SectionExp info={EXPERIENCE} />
       </section>
 
-      <section>
+      <section className="mt-4">
         <Title>Education</Title>
 
         <SectionExp info={EDUCATION} />
