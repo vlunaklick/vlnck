@@ -20,11 +20,11 @@ const ArticleProject = ({
 }: Props) => {
   return (
     <article className="mt-5 flex flex-col justify-center gap-1 rounded transition-all sm:mt-0">
-      <h3 className="text-lg font-semibold text-slate-900 transition-colors dark:text-slate-50">
+      <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
         {title}
       </h3>
 
-      <p className="text-sm leading-loose text-slate-600 dark:text-slate-400">
+      <p className="text-sm leading-loose text-slate-700 dark:text-slate-300">
         {description}
       </p>
 

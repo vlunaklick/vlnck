@@ -3,6 +3,8 @@ import { useId, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import vlnckIcon from '../../../public/images/icon-me.png'
+
 import Menu from '@/src/components/icons/Menu'
 import Cross from '@/src/components/icons/Cross'
 import Nav from './Nav'
@@ -57,11 +59,16 @@ const Header = () => {
       >
         <picture className="flex items-center justify-center">
           <Image
-            src={'/images' + '/icon-me.png'}
+            src={vlnckIcon}
             alt="My emoji"
             className="cursor-pointer rounded-full"
             width={40}
             height={40}
+            placeholder="blur"
+            style={{
+              maxWidth: '100%',
+              height: 'auto',
+            }}
           />
         </picture>
 

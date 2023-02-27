@@ -37,7 +37,7 @@ const CardBlog = ({ slug, title, date, description, tags }: Props) => {
 
       <Link
         href={'/blog/' + slug}
-        className="pointer-events-auto text-sm text-blue-500 transition-colors hover:text-blue-400 sm:pointer-events-none sm:hidden"
+        className="pointer-events-auto text-sm text-blue-500 hover:text-blue-400 sm:pointer-events-none sm:hidden"
       >
         Read more →
       </Link>

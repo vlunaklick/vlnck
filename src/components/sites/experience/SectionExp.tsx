@@ -23,7 +23,7 @@ const SectionExp = ({ info }: Props) => {
 
   return (
     <>
-      <ol className="flex flex-col gap-3 sm:border-l sm:border-slate-300 dark:sm:border-slate-600 ">
+      <ol className="flex flex-col gap-7 sm:border-l sm:border-slate-300 dark:sm:border-slate-600">
         {experience}
       </ol>
     </>

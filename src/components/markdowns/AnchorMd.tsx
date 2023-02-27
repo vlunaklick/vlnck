@@ -10,7 +10,7 @@ const AnchorMd = (props: Props) => {
   return (
     <a
       href={props.href}
-      className={'font-medium underline transition-colors hover:text-blue-500'}
+      className={'font-medium underline hover:text-blue-500'}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={first}

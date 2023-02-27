@@ -51,6 +51,19 @@ body {
   height: 100%;
   transition: background-color 0.2s ease-out;
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+
+  transition-property: color, background-color, border-color, fill, stroke,
+    -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 img,
 picture,
 video,
