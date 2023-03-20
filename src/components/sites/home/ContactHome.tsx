@@ -7,25 +7,25 @@ const ContactHome = () => {
         Contact
       </p>
       <LinkContactHome
+        aria="Link to my LinkedIn profile"
+        content="Valentín Lunaklick"
         name="LinkedIn"
         url="https://www.linkedin.com/in/vlunaklick/"
-        content="Valentín Lunaklick"
-        aria="Link to my LinkedIn profile"
       />
 
       <LinkContactHome
+        aria="Link to my Github profile"
+        content="vlunaklick"
         name="Github"
         url="https://github.com/vlunaklick"
-        content="vlunaklick"
-        aria="Link to my Github profile"
       />
 
       <LinkContactHome
+        aria="Link to download my resume"
+        content="Click to download"
+        download="valentin-lunaklick-resume"
         name="Resume"
         url="valentinlunaklick.pdf"
-        download="valentin-lunaklick-resume"
-        content="Click to download"
-        aria="Link to download my resume"
       />
     </section>
   )

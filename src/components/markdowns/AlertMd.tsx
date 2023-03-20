@@ -15,11 +15,7 @@ interface Props {
 }
 
 const AlertMd = ({ children, variant = 'gray' }: Props) => {
-  return (
-    <div className={'mb-8 rounded-md p-5 text-sm' + ' ' + Variants[variant]}>
-      {children}
-    </div>
-  )
+  return <div className={'mb-8 rounded-md p-5 text-sm' + ' ' + Variants[variant]}>{children}</div>
 }
 
 export default AlertMd

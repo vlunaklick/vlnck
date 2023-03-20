@@ -1,7 +1,7 @@
-import matter from 'gray-matter'
-
 import fs from 'fs'
 import path from 'path'
+
+import matter from 'gray-matter'
 
 const root = process.cwd()
 
@@ -13,7 +13,7 @@ export async function getPosts(limit?: number) {
 
     const markdownWithMetadata = fs.readFileSync(
       path.join(root, 'content/posts', filename),
-      'utf-8'
+      'utf-8',
     )
 
     const { data: frontmatter } = matter(markdownWithMetadata)
@@ -46,7 +46,7 @@ export async function getFileBySlug() {
 export async function getFileWithMetadata(slug: string) {
   const markdownWithMetadata = fs.readFileSync(
     path.join(root, 'content/posts', slug + '.md'),
-    'utf-8'
+    'utf-8',
   )
   const { data: frontmatter, content } = matter(markdownWithMetadata)
 

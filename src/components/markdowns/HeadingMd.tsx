@@ -14,6 +14,7 @@ const HeadingMd = ({ level, children }: Props) => {
   } else if (level === 2) {
     return <h2 className="mb-6 mt-12 text-2xl font-semibold">{children}</h2>
   }
+
   return <h3 className="mt-6 mb-12 text-xl font-semibold">{children}</h3>
 }
 

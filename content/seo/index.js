@@ -22,8 +22,7 @@ export const SEO_BLOG = {
   title: 'Valentín Lunaklick | Blog',
   description:
     "Welcome to my personal blog, where I, Valentín Lunaklick, share my thoughts and experiences on web development and technology. Here you'll find articles on topics such as programming languages, development trends, and my personal journey in the tech industry. Whether you're a fellow developer looking for inspiration or just curious about the inner workings of the tech industry, you'll find valuable insights here.",
-  og_title:
-    'Valentín Lunaklick | Blog | Web development and technology articles',
+  og_title: 'Valentín Lunaklick | Blog | Web development and technology articles',
   og_description:
     "Explore the world of web development and technology through my eyes on my personal blog. Here you'll find articles on programming languages, development trends, and my personal journey in the tech industry. Join me in discussing the latest and greatest in the tech world.",
   og_type: 'website',

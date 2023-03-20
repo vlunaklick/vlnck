@@ -19,9 +19,6 @@ const Code = ({ children, className }: Props) => {
 
   return (
     <SyntaxHighlighter
-      language={language}
-      style={dark}
-      wrapLines={true}
       customStyle={{
         borderRadius: '0.5rem',
         padding: '1rem',
@@ -29,6 +26,9 @@ const Code = ({ children, className }: Props) => {
         boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
         fontSize: '12px',
       }}
+      language={language}
+      style={dark}
+      wrapLines={true}
     >
       {children}
     </SyntaxHighlighter>

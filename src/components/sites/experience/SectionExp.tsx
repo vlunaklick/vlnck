@@ -11,12 +11,12 @@ const SectionExp = ({ info }: Props) => {
     return (
       <ArticleExp
         key={exp.title + exp.place}
-        start={exp.start}
-        end={exp.end}
-        title={exp.title}
-        place={exp.place}
-        url={exp.URL}
         description={exp.description}
+        end={exp.end}
+        place={exp.place}
+        start={exp.start}
+        title={exp.title}
+        url={exp.URL}
       />
     )
   })

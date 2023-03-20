@@ -7,12 +7,12 @@ const SectionProject = () => {
     return (
       <ArticleProject
         key={work.title}
-        title={work.title}
         description={work.content}
-        tags={work.techs}
-        url={work.liveview}
         github={work.code}
         image={work.src}
+        tags={work.techs}
+        title={work.title}
+        url={work.liveview}
       />
     )
   })

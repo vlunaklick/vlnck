@@ -6,11 +6,11 @@ export const config = {
 }
 
 const interFontB = fetch(
-  'https://firebasestorage.googleapis.com/v0/b/concers-30991.appspot.com/o/fonts%2FInter-Bold.ttf?alt=media&token=7baf5dd5-c30e-412d-8ac6-8c06577961c3'
+  'https://firebasestorage.googleapis.com/v0/b/concers-30991.appspot.com/o/fonts%2FInter-Bold.ttf?alt=media&token=7baf5dd5-c30e-412d-8ac6-8c06577961c3',
 ).then(res => res.arrayBuffer())
 
 const interFontR = fetch(
-  'https://firebasestorage.googleapis.com/v0/b/concers-30991.appspot.com/o/fonts%2FInter-Regular.ttf?alt=media&token=fb8b0c26-5e5d-4311-a93a-45926f580b5f'
+  'https://firebasestorage.googleapis.com/v0/b/concers-30991.appspot.com/o/fonts%2FInter-Regular.ttf?alt=media&token=fb8b0c26-5e5d-4311-a93a-45926f580b5f',
 ).then(res => res.arrayBuffer())
 
 export default async function handler(req) {
@@ -23,9 +23,7 @@ export default async function handler(req) {
       ? searchParams.get('title')?.slice(0, 100)
       : 'My default title'
 
-    const subtitle = searchParams.has('subtitle')
-      ? searchParams.get('subtitle')?.slice(0, 100)
-      : ''
+    const subtitle = searchParams.has('subtitle') ? searchParams.get('subtitle')?.slice(0, 100) : ''
 
     const website = searchParams.get('website') || 'vlnck'
 
@@ -40,9 +38,7 @@ export default async function handler(req) {
               />
             </div>
 
-            <h1 tw="text-[80px] p-20 font-black text-left text-slate-900 m-0 p-0 mt-5">
-              {title}
-            </h1>
+            <h1 tw="text-[80px] p-20 font-black text-left text-slate-900 m-0 p-0 mt-5">{title}</h1>
             {subtitle && (
               <h2 tw="text-[40px] p-20 font-black text-left text-slate-900 m-0 p-0 mt-5">
                 {subtitle}
@@ -50,9 +46,7 @@ export default async function handler(req) {
             )}
           </div>
 
-          <div tw="text-2xl pb-10 px-20 mb-0 text-slate-900 m-0 p-0">
-            {website}
-          </div>
+          <div tw="text-2xl pb-10 px-20 mb-0 text-slate-900 m-0 p-0">{website}</div>
         </div>
       ),
       {
@@ -72,10 +66,11 @@ export default async function handler(req) {
             weight: 700,
           },
         ],
-      }
+      },
     )
   } catch (e) {
     console.log(`${e.message}`)
+
     return new Response(`Failed to generate the image`, {
       status: 500,
     })

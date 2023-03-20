@@ -4,7 +4,6 @@ import { readingTime } from 'reading-time-estimator'
 import { getFileWithMetadata, getFileBySlug } from 'src/lib/mdReader'
 import { useFormatedDate } from 'src/hooks/useFormatedDate'
 import FrontMatter from 'src/types/post'
-
 import ParserMd from 'src/components/markdowns/ParserMd'
 import PageLayout from 'src/components/layouts/PageLayout'
 import Seo from 'src/components/app/Seo'
@@ -25,17 +24,14 @@ const Post = ({ frontmatter, content }: Props) => {
     <>
       <PageLayout>
         <Seo
-          title={frontmatter.title}
           description={frontmatter.description}
-          og_title={frontmatter.title}
           og_description={frontmatter.description}
+          og_title={frontmatter.title}
           og_type="website"
+          title={frontmatter.title}
         />
 
-        <Link
-          href="/blog"
-          className="w-max text-xs text-slate-400 dark:text-slate-500"
-        >
+        <Link className="w-max text-xs text-slate-400 dark:text-slate-500" href="/blog">
           ← Back to blog
         </Link>
 

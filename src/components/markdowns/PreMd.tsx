@@ -10,6 +10,7 @@ const PreBlock = ({ children, ...rest }: PreBlock) => {
     // @ts-ignore
     return Code(children['props'])
   }
+
   return <pre {...rest}>{children}</pre>
 }
 

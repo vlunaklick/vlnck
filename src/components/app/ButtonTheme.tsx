@@ -1,6 +1,5 @@
 import { useMounted } from 'src/hooks/useMounted'
 import { useThemes } from 'src/hooks/useThemes'
-
 import Sun from 'src/components/icons/Sun'
 import Moon from 'src/components/icons/Moon'
 
@@ -14,7 +13,7 @@ const ButtonTheme = () => {
         className={
           'relative flex items-center justify-center overflow-hidden rounded border bg-slate-50 p-3 text-xs dark:border-slate-500 dark:bg-slate-900'
         }
-      ></button>
+      />
     )
   }
 
@@ -26,10 +25,10 @@ const ButtonTheme = () => {
   return (
     <button
       aria-label={textLabel}
-      title={textLabel}
       className={
         'relative flex items-center justify-center overflow-hidden rounded border bg-slate-50 p-3 text-xs dark:border-slate-500 dark:bg-slate-900'
       }
+      title={textLabel}
       onClick={toggleTheme}
     >
       {mounted && (
