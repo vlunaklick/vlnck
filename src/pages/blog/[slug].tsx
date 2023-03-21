@@ -6,8 +6,8 @@ import { useFormatedDate } from 'src/hooks/useFormatedDate'
 import FrontMatter from 'src/types/post'
 import ParserMd from '@/src/components/markdown/ParserMd'
 import PageLayout from 'src/components/layouts/PageLayout'
-import Seo from 'src/components/app/Seo'
-import ButtonTop from '@/src/components/app/ButtonTop'
+import Seo from '@/src/components/ui/Seo'
+import ButtonTop from '@/src/components/ui/ButtonTop'
 
 interface Props {
   frontmatter: FrontMatter

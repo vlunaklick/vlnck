@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 
 import PageLayout from 'src/components/layouts/PageLayout'
-import Seo from 'src/components/app/Seo'
+import Seo from '@/src/components/ui/Seo'
 
 import { SEO_ERROR } from '../../content/seo'
 

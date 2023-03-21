@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 
-import NavLinks from './NavLinks'
 import ButtonTheme from './ButtonTheme'
+import NavLinks from './NavLinks'
 
 const Nav = () => {
   const { asPath } = useRouter()

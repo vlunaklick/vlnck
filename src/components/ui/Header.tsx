@@ -2,8 +2,8 @@ import { useId, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Menu from '@/src/components/icons/Menu'
-import Cross from '@/src/components/icons/Cross'
+import Menu from '@/src/components/ui/icons/Menu'
+import Cross from '@/src/components/ui/icons/Cross'
 
 import vlnckIcon from '../../../public/images/icon-me.png'
 

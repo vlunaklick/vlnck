@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import UpArrow from 'src/components/icons/UpArrow'
+import UpArrow from '@/src/components/ui/icons/UpArrow'
 
 export default function ButtonTop() {
   const [isView, setIsView] = useState(false)

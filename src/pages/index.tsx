@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 
-import PageLayout from 'src/components/layouts/PageLayout'
-import DescriptionHome from 'src/components/sites/home/DescriptionHome'
-import ContactHome from 'src/components/sites/home/ContactHome'
-import Title from 'src/components/app/Title'
-import Seo from 'src/components/app/Seo'
+import PageLayout from '@/src/components/layouts/PageLayout'
+import ContactHome from '@/src/components/ui/ContactHome'
+import Title from '@/src/components/ui/Title'
+import Seo from '@/src/components/ui/Seo'
+import DescriptionHome from '@/src//components/ui/DescriptionHome'
 
 import { SEO_HOME } from '../../content/seo'
 
