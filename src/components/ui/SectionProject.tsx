@@ -1,23 +1,23 @@
-import { WORKS } from '../../../../content/info/works'
+import { WORKS } from '@/src/constants/works'
 
 import ArticleProject from './ArticleProject'
 
 const SectionProject = () => {
-  let worksCard = WORKS.map(work => {
-    return (
-      <ArticleProject
-        key={work.title}
-        description={work.content}
-        github={work.code}
-        image={work.src}
-        tags={work.techs}
-        title={work.title}
-        url={work.liveview}
-      />
-    )
-  })
-
-  return <section className="flex flex-col gap-8">{worksCard}</section>
+  return (
+    <section className="flex flex-col gap-8">
+      {WORKS.map(work => (
+        <ArticleProject
+          key={work.title}
+          code={work.code}
+          content={work.content}
+          liveview={work.liveview}
+          src={work.src}
+          techs={work.techs}
+          title={work.title}
+        />
+      ))}
+    </section>
+  )
 }
 
 export default SectionProject

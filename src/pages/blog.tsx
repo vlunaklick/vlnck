@@ -1,14 +1,13 @@
 import type { NextPage } from 'next'
 
-import Post from 'src/types/post'
-import { sortByDate } from 'src/utils'
-import { getPosts } from 'src/lib/mdReader'
-import PageLayout from 'src/components/layouts/PageLayout'
+import Post from '@/src/types/post'
+import { sortByDate } from '@/src/utils'
+import { getPosts } from '@/src/lib/mdReader'
+import PageLayout from '@/src/components/layouts/PageLayout'
 import CardBlog from '@/src/components/ui/CardBlog'
 import Title from '@/src/components/ui/Title'
 import Seo from '@/src/components/ui/Seo'
-
-import { SEO_BLOG } from '../../content/seo'
+import { SEO_BLOG } from '@/src/constants/seo'
 
 interface Props {
   posts: Post[]

@@ -2,10 +2,9 @@ import type { NextPage } from 'next'
 
 import Link from 'next/link'
 
-import PageLayout from 'src/components/layouts/PageLayout'
+import PageLayout from '@/src/components/layouts/PageLayout'
 import Seo from '@/src/components/ui/Seo'
-
-import { SEO_ERROR } from '../../content/seo'
+import { SEO_ERROR } from '@/src/constants/seo'
 
 const Custom404: NextPage = () => {
   return (

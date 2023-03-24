@@ -45,31 +45,31 @@ const Header = () => {
     }
   }
 
-  const handleClick = (e: any) => {
+  const handleClick = (e: React.MouseEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement
 
     hideOverFlow(target.checked)
   }
 
   return (
-    <header className="mx-auto mb-7 flex w-full max-w-2xl items-center justify-between p-4">
-      <Link className="flex items-center gap-2 transition-transform hover:scale-105" href={'/'}>
-        <picture className="flex items-center justify-center">
+    <header className="mx-auto mb-7 flex w-full max-w-3xl items-center justify-between p-4">
+      <Link className="flex items-center gap-2 transition-transform hover:scale-105 " href="/">
+        {/* <picture className="flex items-center justify-center">
           <Image
             alt="My emoji"
             className="cursor-pointer rounded-full"
-            height={40}
+            height={25}
             placeholder="blur"
             src={vlnckIcon}
             style={{
               maxWidth: '100%',
               height: 'auto',
             }}
-            width={40}
+            width={25}
           />
-        </picture>
+        </picture> */}
 
-        <h1 className={'text-xl font-bold sm:block sm:text-3xl'}>Vlnck</h1>
+        <h1 className="text-lg font-bold">Vlnck</h1>
       </Link>
 
       <input hidden className="peer" id={checkboxId} type="checkbox" onClick={handleClick} />

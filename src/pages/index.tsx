@@ -5,8 +5,7 @@ import ContactHome from '@/src/components/ui/ContactHome'
 import Title from '@/src/components/ui/Title'
 import Seo from '@/src/components/ui/Seo'
 import DescriptionHome from '@/src//components/ui/DescriptionHome'
-
-import { SEO_HOME } from '../../content/seo'
+import { SEO_HOME } from '@/src/constants/seo'
 
 const Home: NextPage = () => {
   return (

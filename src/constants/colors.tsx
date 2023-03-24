@@ -9,7 +9,7 @@ export const COLORS_TEXT = {
   slate: 'text-slate-500',
   brown: 'text-amber-500',
   default: 'dark:text-white text-black',
-}
+} as const
 
 export const COLORS_BG = {
   green: 'bg-green-300 text-green-800',
@@ -21,7 +21,7 @@ export const COLORS_BG = {
   orange: 'bg-orange-300 text-orange-800',
   slate: 'bg-slate-300 text-slate-800',
   brown: 'bg-amber-300 text-amber-800',
-}
+} as const
 
 export const BORDER_COLORS = {
   green: 'border-green-300',
@@ -34,4 +34,4 @@ export const BORDER_COLORS = {
   slate: 'border-slate-300',
   brown: 'border-amber-300',
   default: 'dark:border-slate-300 border-slate-800',
-}
+} as const

@@ -6,7 +6,7 @@ export const SEO_PROJECTS = {
   og_description:
     "Check out my web development projects on this page. Here you'll find a selection of my past and current projects with brief descriptions, technologies used, and links to view the live project or see more details. Explore my work and get inspired for your next project!",
   og_type: 'website',
-}
+} as const
 
 export const SEO_EXPERIENCE = {
   title: 'Valentín Lunaklick | Experience and Education',
@@ -16,7 +16,7 @@ export const SEO_EXPERIENCE = {
   og_description:
     "Discover my career and education in web development on this page. Learn about my past and current employment, my skills and technologies, and my academic qualifications. Explore my background and career path and let's create something amazing together.",
   og_type: 'website',
-}
+} as const
 
 export const SEO_BLOG = {
   title: 'Valentín Lunaklick | Blog',
@@ -26,7 +26,7 @@ export const SEO_BLOG = {
   og_description:
     "Explore the world of web development and technology through my eyes on my personal blog. Here you'll find articles on programming languages, development trends, and my personal journey in the tech industry. Join me in discussing the latest and greatest in the tech world.",
   og_type: 'website',
-}
+} as const
 
 export const SEO_HOME = {
   title: 'Valentín Lunaklick | Web developer',
@@ -36,7 +36,7 @@ export const SEO_HOME = {
   og_description:
     "Discover my expertise as a web developer and my insights as a blogger on my personal website. Here you'll find my portfolio, my blog, my skills and my academic qualifications. Join me in discussing the latest and greatest in the tech world, and let's create something amazing together.",
   og_type: 'website',
-}
+} as const
 
 export const SEO_ERROR = {
   title: 'Valentín Lunaklick | Page not found',
@@ -45,4 +45,4 @@ export const SEO_ERROR = {
   og_title: 'Valentín Lunaklick | Page not found',
   og_description: 'Valentín Lunaklick | Error',
   og_type: 'website',
-}
+} as const

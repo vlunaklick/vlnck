@@ -10,7 +10,7 @@ const PageLayout = ({ children }: Props) => {
     <>
       <Header />
 
-      <main className="mx-auto flex max-w-2xl flex-col gap-4 px-4">{children}</main>
+      <main className="mx-auto flex max-w-3xl flex-col gap-4 px-4">{children}</main>
 
       <Footer />
     </>

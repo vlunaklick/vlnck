@@ -2,11 +2,10 @@ import type { NextPage } from 'next'
 
 import PageLayout from 'src/components/layouts/PageLayout'
 import Title from '@/src/components/ui/Title'
-import SectionExp from 'src/components/sites/experience/SectionExp'
+import SectionExp from '@/src/components/ui/SectionExp'
 import Seo from '@/src/components/ui/Seo'
-
-import { SEO_EXPERIENCE } from '../../content/seo'
-import { EXPERIENCE, EDUCATION } from '../../content/info/experience'
+import { SEO_EXPERIENCE } from '@/src/constants/seo'
+import { EXPERIENCE, EDUCATION } from '@/src/constants/experience'
 
 const Exp: NextPage = () => {
   return (
